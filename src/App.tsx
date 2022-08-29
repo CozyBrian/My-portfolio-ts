@@ -1,12 +1,17 @@
 import React from 'react';
-import './App.css';
+import CodeHero from './components/codehero/hero.component';
+import Header from './components/header/header.component';
 
 function App() {
   return (
-    <div className="App">
-      <h1 className="text-3xl font-bold underline">
-      Hello world!
-      </h1>
+    <div className="m-0 bg-sky-900">
+      <div className="min-h-screen flex flex-col scroll-smooth">
+        <Header />
+        <CodeHero />
+      </div>
+      <div className="min-h-screen flex flex-col justify-center scroll-smooth">
+        
+      </div>
     </div>
   );
 }
