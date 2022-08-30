@@ -1,21 +1,25 @@
 import React from "react";
 
-const ProjectCard = () => {
+type Product = {
+  image: string;
+  title: string;
+  disc: string;
+  link: string;
+  type: string;
+};
+
+const ProjectCard = ({ title, disc, image, link, type }: Product) => {
   return (
     <div className="max-w-sm m-4 rounded-xl shadow-md dark:bg-gray-900 dark:text-gray-100 mx-3 hover:scale-105 duration-500">
       <img
-        src="https://source.unsplash.com/random/300x300/?2"
+        src={image}
         alt=""
-        className="object-cover object-center w-full rounded-t-xl h-72 dark:bg-gray-500"
+        className="object-cover hover:object-contain duration-300 transition-all object-center w-full rounded-t-xl h-72 dark:bg-gray-500"
       />
       <div className="flex flex-col justify-between p-4 space-y-8">
         <div className="space-y-2">
-          <h2 className="text-xl font-semibold tracking-wide">
-            Donec lectus leo
-          </h2>
-          <p className="dark:text-gray-100">
-            Curabitur luctus erat nunc, sed ullamcorper erat vestibulum eget.
-          </p>
+          <h2 className="text-xl font-semibold tracking-wide">{title}</h2>
+          <p className="dark:text-gray-100">{disc}</p>
         </div>
         <button
           type="button"

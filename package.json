@@ -25,7 +25,8 @@
     "react-scripts": "5.0.1",
     "react-typewriter-effect": "^1.1.0",
     "typescript": "^4.7.3",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "windups": "^1.2.1"
   },
   "scripts": {
     "start": "react-scripts start",
