@@ -11,7 +11,7 @@ const CodeWindow = () => {
       <WindowNav />
       <div className="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 xl:py-32 lg:flex-row lg:justify-between">
         <div className="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-4xl lg:text-left">
-          <h1 className='text-7xl text-white pb-1'>Hello, I'm Brian Newton</h1>
+          <h1 className='text-5xl sm:text-7xl font-semibold text-white pb-3'>Hello, I'm Brian Newton</h1>
           <p className="text-white">
               I’m a Full-stack software developer based in Ghana. I love to build
               mobile and web applications that improve the lives of people all

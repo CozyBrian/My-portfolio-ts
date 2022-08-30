@@ -1,4 +1,5 @@
 import React from 'react';
+import ContactView from './components/Contact/contact.component';
 import CodeHero from './components/Hero/codehero/hero.component';
 import Footer from './components/Layout/footer/footer.component';
 import Header from './components/Layout/header/header.component';
@@ -18,6 +19,7 @@ function App() {
       <div className="min-h-screen flex flex-col justify-center scroll-smooth">
         <ProjectSection />
       </div>
+      <ContactView />
       <Footer />
     </div>
   );

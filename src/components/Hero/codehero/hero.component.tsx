@@ -3,7 +3,7 @@ import CodeWindow from './code-window.component';
 
 const CodeHero = () => {
   return (
-    <div className='p-12'>
+    <div className='p-8 md:py-12'>
       <CodeWindow />
     </div>
   )
