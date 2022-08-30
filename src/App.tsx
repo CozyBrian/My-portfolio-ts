@@ -1,6 +1,9 @@
 import React from 'react';
-import CodeHero from './components/codehero/hero.component';
-import Header from './components/header/header.component';
+import CodeHero from './components/Hero/codehero/hero.component';
+import Footer from './components/Layout/footer/footer.component';
+import Header from './components/Layout/header/header.component';
+import ProjectSection from './components/Projects/Projects';
+import SkillView from './components/Skills/skills';
 
 function App() {
   return (
@@ -10,8 +13,12 @@ function App() {
         <CodeHero />
       </div>
       <div className="min-h-screen flex flex-col justify-center scroll-smooth">
-        
+        <SkillView />
       </div>
+      <div className="min-h-screen flex flex-col justify-center scroll-smooth">
+        <ProjectSection />
+      </div>
+      <Footer />
     </div>
   );
 }
