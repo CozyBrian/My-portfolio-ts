@@ -2,9 +2,9 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="dark:bg-gray-800 dark:text-gray-50">
+    <footer className=" bg-gray-800  text-gray-50">
       <div className="container flex flex-col p-4 mx-auto md:p-8 lg:flex-row justify-between divide-gray-400">
-        <div className="py-6 text-sm text-center dark:text-gray-400">
+        <div className="py-6 text-sm text-center  text-gray-400">
           © 2022 Briton Tech. All rights reserved.
         </div>
         <div className="flex flex-col justify-center pt-6 lg:pt-0">
@@ -13,7 +13,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               href="/#"
               title="Instagram"
-              className="flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 dark:bg-sky-500 dark:text-gray-900"
+              className="flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10  bg-sky-500  text-gray-900"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -28,7 +28,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               href="/#"
               title="Twitter"
-              className="flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 dark:bg-sky-500 dark:text-gray-900"
+              className="flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10  bg-sky-500  text-gray-900"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -43,7 +43,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               href="/#"
               title="Gmail"
-              className="flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 dark:bg-sky-500 dark:text-gray-900"
+              className="flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10  bg-sky-500  text-gray-900"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

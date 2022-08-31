@@ -2,13 +2,13 @@ import React from "react";
 
 const ContactView = () => {
   return (
-    <section className="py-20 dark:bg-gray-800 dark:text-gray-100 ">
+    <section className="py-20  bg-gray-800  text-gray-100 ">
       <div className="container px-4 mx-auto">
         <div className="max-w-2xl mx-auto mb-16 text-center">
           <h2 className="text-4xl font-bold lg:text-5xl">CONTACT ME</h2>
         </div>
         {/* <div className="flex flex-wrap items-stretch justify-center -mx-4">
-          <button type="button" className="flex items-center justify-center p-2 font-semibold rounded-sm w-36 dark:bg-sky-500 dark:text-gray-900">
+          <button type="button" className="flex items-center justify-center p-2 font-semibold rounded-sm w-36  bg-sky-500  text-gray-900">
             Contact Me
           </button>
         </div> */}
@@ -18,7 +18,7 @@ const ContactView = () => {
               rel="noopener noreferrer"
               href="https://github.com/CozyBrian"
               title="Github"
-              className="flex items-center justify-center w-20 h-20 rounded-full sm:w-24 sm:h-24 dark:bg-sky-500 dark:text-gray-900"
+              className="flex items-center justify-center w-20 h-20 rounded-full sm:w-24 sm:h-24  bg-sky-500  text-gray-900"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -33,7 +33,7 @@ const ContactView = () => {
               rel="noopener noreferrer"
               href="https://twitter.com/CozyTesla"
               title="Twitter"
-              className="flex items-center justify-center w-20 h-20 rounded-full sm:w-24 sm:h-24 dark:bg-sky-500 dark:text-gray-900"
+              className="flex items-center justify-center w-20 h-20 rounded-full sm:w-24 sm:h-24  bg-sky-500  text-gray-900"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -48,7 +48,7 @@ const ContactView = () => {
               rel="noopener noreferrer"
               href="mailto:kwabenanewton02@gmail.com"
               title="Gmail"
-              className="flex items-center justify-center w-20 h-20 rounded-full sm:w-24 sm:h-24 dark:bg-sky-500 dark:text-gray-900"
+              className="flex items-center justify-center w-20 h-20 rounded-full sm:w-24 sm:h-24  bg-sky-500  text-gray-900"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -63,7 +63,7 @@ const ContactView = () => {
               rel="noopener noreferrer"
               href="https://www.linkedin.com/in/brian-newton-b6b8231b8/"
               title="LinkedIn"
-              className="flex items-center justify-center w-20 h-20 rounded-full sm:w-24 sm:h-24 dark:bg-sky-500 dark:text-gray-900"
+              className="flex items-center justify-center w-20 h-20 rounded-full sm:w-24 sm:h-24  bg-sky-500  text-gray-900"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

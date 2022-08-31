@@ -7,7 +7,7 @@ const CodeWindow = () => {
     "https://firebasestorage.googleapis.com/v0/b/my-portfolio-35b84.appspot.com/o/Profile.jpg?alt=media&token=3c8c8853-722a-4d4c-9d59-f048b6f7e3ee";
 
   return (
-    <section className="rounded-xl min-h-[80vh] dark:bg-gray-800 dark:text-gray-100 p-3">
+    <section className="rounded-xl min-h-[80vh]  bg-gray-800  text-gray-100 p-3">
       <WindowNav />
       <div className="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 xl:py-32 lg:flex-row lg:justify-between">
         <div className="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-4xl lg:text-left">
