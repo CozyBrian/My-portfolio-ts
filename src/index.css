@@ -2,12 +2,14 @@
 
 body {
   margin: 0;
-  scroll-snap-type: y mandatory;
+}
+
+html {
   scroll-behavior: smooth;
 }
 
 .child {
-  scroll-snap-align: start;
+  /* scroll-snap-align: center; */
 }
 
 
