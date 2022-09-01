@@ -30,12 +30,26 @@ const CodeWindow = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 2.75 }}
           >
-            <p className="text-gray-300 pt-2 text-xl font-['Nunito_Sans']">
+            <p className="text-gray-300 pt-2 pb-4 text-xl font-['Nunito_Sans']">
               I’m a Full-stack software developer based in Ghana. I love to
               build mobile and web applications that improve the lives of people
               all around the world and I’m very passionate about connecting the
               dots between ideas and reality with code.
             </p>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 2.9 }}
+          >
+            <a href="#contact" rel="noopener noreferrer">
+              <button
+                type="button"
+                className="flex items-center font-['Nunito_Sans'] justify-center p-2 duration-200 border border-sky-500 text-2xl font-semibold rounded-sm w-40 hover:bg-sky-500 text-sky-500 hover:text-gray-900"
+              >
+                Hire Me
+              </button>
+            </a>
           </motion.div>
         </div>
         <div className="flex items-center justify-center h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">

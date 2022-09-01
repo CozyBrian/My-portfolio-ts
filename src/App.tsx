@@ -27,20 +27,22 @@ const database = getDatabase(app);
 function App() {
   return (
     <div className="m-0 bg-slate-900">
-      <div className="min-h-screen flex flex-col scroll-smooth">
+      <div className="min-h-screen flex flex-col justify-center child">
         <Header />
         <CodeHero />
       </div>
-      <div className="min-h-screen flex flex-col justify-center scroll-smooth">
+      <div className="min-h-screen flex flex-col justify-center child">
         <SkillView />
       </div>
-      <div className="min-h-screen flex flex-col justify-center scroll-smooth">
+      <div className="min-h-screen flex flex-col justify-center child">
         <ApiContextProvider db={database}>
           <ProjectSection />
         </ApiContextProvider>
       </div>
-      <ContactView />
-      <Footer />
+      <div className="child">
+        <ContactView />
+        <Footer />
+      </div>
     </div>
   );
 }

@@ -6,7 +6,15 @@ const Header = () => {
       <div className="container flex flex-row justify-between items-center h-full px-2 sm:px-24">
         <h4 className="text-white opacity-100 text-xl">Brian Newton</h4>
         <div>
-          <a
+          <a href="#contact" rel="noopener noreferrer">
+            <button
+              type="button"
+              className="flex items-center font-['Nunito_Sans'] justify-center p-1 duration-200 border border-sky-500 text-lg font-semibold rounded-sm w-24 hover:bg-sky-500 text-sky-500 hover:text-gray-900"
+            >
+              Hire Me
+            </button>
+          </a>
+          {/* <a
             href="#home"
             className="text-white px-1.5 hover:opacity-80 transition-all duration-100"
           >
@@ -29,7 +37,7 @@ const Header = () => {
             className="text-white px-1.5 hover:opacity-80 transition-all duration-100"
           >
             Contact
-          </a>
+          </a> */}
         </div>
       </div>
     </div>

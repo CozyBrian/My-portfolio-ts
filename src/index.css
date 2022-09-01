@@ -2,7 +2,14 @@
 
 body {
   margin: 0;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
 }
+
+.child {
+  scroll-snap-align: start;
+}
+
 
 @tailwind base;
 
