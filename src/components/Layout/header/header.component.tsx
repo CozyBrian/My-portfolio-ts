@@ -2,7 +2,7 @@ import React from "react";
 
 const Header = () => {
   return (
-    <div className="h-14 bg-black opacity-70 flex items-center justify-center">
+    <div className="h-14 bg-black opacity-70 flex w-full z-50 items-center justify-center fixed top-0">
       <div className="container flex flex-row justify-between items-center h-full px-2 sm:px-24">
         <h4 className="text-white opacity-100 text-xl">Brian Newton</h4>
         <div>
