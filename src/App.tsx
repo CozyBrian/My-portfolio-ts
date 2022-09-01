@@ -26,7 +26,7 @@ const database = getDatabase(app);
 
 function App() {
   return (
-    <div className="m-0 bg-sky-900">
+    <div className="m-0 bg-slate-900">
       <div className="min-h-screen flex flex-col scroll-smooth">
         <Header />
         <CodeHero />

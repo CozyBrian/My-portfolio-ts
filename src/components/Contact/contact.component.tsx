@@ -16,9 +16,10 @@ const ContactView = () => {
           <div className="flex justify-center space-x-4">
             <a
               rel="noopener noreferrer"
+              target="_blank"
               href="https://github.com/CozyBrian"
               title="Github"
-              className="flex items-center justify-center w-20 h-20 rounded-full sm:w-24 sm:h-24  bg-sky-500  text-gray-900"
+              className="flex items-center justify-center w-20 h-20 rounded-full sm:w-24 sm:h-24 duration-200 bg-sky-500 hover:bg-sky-700  text-gray-900"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -31,9 +32,10 @@ const ContactView = () => {
             </a>
             <a
               rel="noopener noreferrer"
+              target="_blank"
               href="https://twitter.com/CozyTesla"
               title="Twitter"
-              className="flex items-center justify-center w-20 h-20 rounded-full sm:w-24 sm:h-24  bg-sky-500  text-gray-900"
+              className="flex items-center justify-center w-20 h-20 rounded-full sm:w-24 sm:h-24 duration-200 bg-sky-500 hover:bg-sky-700 text-gray-900"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -46,9 +48,10 @@ const ContactView = () => {
             </a>
             <a
               rel="noopener noreferrer"
+              target="_blank"
               href="mailto:kwabenanewton02@gmail.com"
               title="Gmail"
-              className="flex items-center justify-center w-20 h-20 rounded-full sm:w-24 sm:h-24  bg-sky-500  text-gray-900"
+              className="flex items-center justify-center w-20 h-20 rounded-full sm:w-24 sm:h-24 duration-200 bg-sky-500 hover:bg-sky-700 text-gray-900"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -61,9 +64,10 @@ const ContactView = () => {
             </a>
             <a
               rel="noopener noreferrer"
+              target="_blank"
               href="https://www.linkedin.com/in/brian-newton-b6b8231b8/"
               title="LinkedIn"
-              className="flex items-center justify-center w-20 h-20 rounded-full sm:w-24 sm:h-24  bg-sky-500  text-gray-900"
+              className="flex items-center justify-center w-20 h-20 rounded-full sm:w-24 sm:h-24 duration-200 bg-sky-500 hover:bg-sky-700 text-gray-900"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

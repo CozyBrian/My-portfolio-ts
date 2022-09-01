@@ -1,15 +1,22 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { motion } from "framer-motion";
 import { faWindowMaximize, faServer } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 
 const SkillView = () => {
   return (
     <div>
-      <section className="py-20  bg-gray-800  text-gray-100">
+      <section className="py-20 text-gray-100">
         <div className="container px-4 mx-auto">
           <div className="flex flex-wrap items-stretch justify-center -mx-4">
             <div className="flex w-full mb-8 mx-8 sm:px-4 md:w-1/2 lg:w-1/3 lg:mb-0 justify-center hover:scale-105 duration-500">
-              <div className="flex flex-col p-6 space-y-6 justify-center items-center rounded-2xl shadow sm:p-8  bg-sky-600  text-gray-100">
+              <motion.div
+                initial={{ opacity: 0, x: -100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1.5 }}
+                viewport={{ once: true }}
+                className="flex flex-col p-6 space-y-6 justify-center items-center rounded-2xl shadow sm:p-8 border-solid border border-sky-600 hover:shadow-sky-400 hover:bg-sky-600 duration-500 text-gray-100"
+              >
                 <div className="space-y-2">
                   <FontAwesomeIcon icon={faWindowMaximize} size="8x" />
                 </div>
@@ -40,10 +47,16 @@ const SkillView = () => {
                     Tailwindcss
                   </li>
                 </ul>
-              </div>
+              </motion.div>
             </div>
             <div className="flex w-full mb-8 mx-8 sm:px-4 md:w-1/2 lg:w-1/3 lg:mb-0 justify-center hover:scale-105 duration-500">
-              <div className="flex flex-col p-6 space-y-6 justify-center items-center rounded-2xl shadow sm:p-8  bg-sky-600  text-gray-100">
+              <motion.div
+                initial={{ opacity: 0, x: 100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1.5 }}
+                viewport={{ once: true }}
+                className="flex flex-col p-6 space-y-6 justify-center items-center rounded-2xl shadow sm:p-8 border-solid border border-sky-600 hover:shadow-sky-400 hover:bg-sky-600 duration-500 text-gray-100"
+              >
                 <div className="space-y-2">
                   <FontAwesomeIcon icon={faServer} size="8x" />
                 </div>
@@ -77,7 +90,7 @@ const SkillView = () => {
                     Git
                   </li>
                 </ul>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>
