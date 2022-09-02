@@ -27,6 +27,21 @@ const Header = ({ pagerefs }: Props) => {
       : navlink[2].classList.remove("text-sky-500");
   });
 
+  const sections = [
+    {
+      title: "Home",
+      href: "#home",
+    },
+    {
+      title: "My Skills",
+      href: "#skills",
+    },
+    {
+      title: "Projects",
+      href: "#projects",
+    },
+  ];
+
   return (
     <div
       className={`h-14 ${
@@ -68,27 +83,21 @@ const Header = ({ pagerefs }: Props) => {
           </button>
         </div>
         <div className="sm:flex flex-row justify-center items-center hidden overflow-hidden">
+          {sections.map((item) => (
+            <a
+              href={item.href}
+              className="px-2 hover:text-gray-200 transition-all duration-100 hLink"
+            >
+              {item.title}
+            </a>
+          ))}
           <a
-            href="#home"
-            className="px-2 hover:text-gray-200 transition-all duration-100 hLink"
+            href="https://drive.google.com/file/d/1orD9h-oXvnHpzT50Tb3TfGJxU_ZASWYs/view?usp=sharing"
+            rel="noopener noreferrer"
+            target="_blank"
           >
-            Home
-          </a>
-          <a
-            href="#skills"
-            className="px-2 hover:text-gray-200 transition-all duration-100 hLink"
-          >
-            My Skills
-          </a>
-          <a
-            href="#projects"
-            className="px-2 hover:text-gray-200 transition-all duration-100 hLink"
-          >
-            Projects
-          </a>
-          <a href="#contact" rel="noopener noreferrer">
             <div className="flex items-center font-['Nunito_Sans'] justify-center p-1 mx-2 duration-200 border border-sky-500 text-lg font-semibold rounded-sm w-24 hover:bg-sky-500 text-sky-500 hover:text-gray-900">
-              Hire Me
+              Resume
             </div>
           </a>
         </div>
@@ -103,34 +112,23 @@ const Header = ({ pagerefs }: Props) => {
             exit={{ y: -300 }}
             transition={{ bounce: 1 }}
           >
+            {sections.map((item) => (
+              <a
+                href={item.href}
+                className="p-2 text-gray-200 hover:text-slate-400 transition-all duration-100"
+                onClick={() => setOpen(!isOpen)}
+              >
+                {item.title}
+              </a>
+            ))}
             <a
-              href="#home"
-              className="p-2 text-gray-200 hover:text-slate-400 transition-all duration-100"
-              onClick={() => setOpen(!isOpen)}
-            >
-              Home
-            </a>
-            <a
-              href="#skills"
-              className="p-2 text-gray-200 hover:text-slate-400 transition-all duration-100"
-              onClick={() => setOpen(!isOpen)}
-            >
-              My Skills
-            </a>
-            <a
-              href="#projects"
-              className="p-2 text-gray-200 hover:text-slate-400 transition-all duration-100"
-              onClick={() => setOpen(!isOpen)}
-            >
-              Projects
-            </a>
-            <a
-              href="#contact"
+              href="https://drive.google.com/file/d/1orD9h-oXvnHpzT50Tb3TfGJxU_ZASWYs/view?usp=sharing"
               rel="noopener noreferrer"
+              target="_blank"
               onClick={() => setOpen(!isOpen)}
             >
               <div className="flex items-center font-['Nunito_Sans'] justify-center p-1 m-2 duration-200 border border-sky-500 text-lg font-semibold rounded-md w-24 hover:bg-sky-500 text-sky-500 hover:text-gray-900">
-                Hire Me
+                Resume
               </div>
             </a>
           </motion.div>
