@@ -33,38 +33,37 @@ function App() {
   const pagerefs = [homeref, skillref, projectref, contactref];
 
   return (
-    <div
-      className="h-screen m-0 bg-slate-900 snap-y snap-mandatory overflow-y-scroll overflow-x-hidden overflow-x-clip scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-sky-400/80"
-      id="home"
-    >
-      <Header pagerefs={pagerefs} />
-      <section
-        ref={homeref}
-        id="home"
-        className="min-h-screen flex flex-col justify-center md:snap-center"
-      >
-        <CodeHero />
-      </section>
-      <section
-        id="skills"
-        ref={skillref}
-        className="min-h-screen flex flex-col justify-center md:snap-center"
-      >
-        <SkillView />
-      </section>
-      <section
-        id="projects"
-        ref={projectref}
-        className="min-h-screen flex flex-col justify-center md:snap-center"
-      >
-        <ApiContextProvider db={database}>
-          <ProjectSection />
-        </ApiContextProvider>
-      </section>
-      <section ref={contactref} className="md:snap-start" id="contact">
-        <ContactView />
-        <Footer />
-      </section>
+    <div className="h-screen snap-y scroll-smooth snap-mandatory overflow-y-scroll overflow-x-hidden overflow-x-clip scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-sky-400/80">
+      <div className="m-0 bg-slate-900 " id="home">
+        <Header pagerefs={pagerefs} />
+        <section
+          ref={homeref}
+          id="home"
+          className="min-h-screen flex flex-col justify-center md:snap-center"
+        >
+          <CodeHero />
+        </section>
+        <section
+          id="skills"
+          ref={skillref}
+          className="min-h-screen flex flex-col justify-center md:snap-center"
+        >
+          <SkillView />
+        </section>
+        <section
+          id="projects"
+          ref={projectref}
+          className="min-h-screen flex flex-col justify-center md:snap-center"
+        >
+          <ApiContextProvider db={database}>
+            <ProjectSection />
+          </ApiContextProvider>
+        </section>
+        <section ref={contactref} className="md:snap-start" id="contact">
+          <ContactView />
+          <Footer />
+        </section>
+      </div>
     </div>
   );
 }
