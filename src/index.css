@@ -4,7 +4,6 @@ body {
   margin: 0;
   overflow-y: hidden;
   overflow-x: clip;
-  width: 100vw;
   scroll-behavior: smooth;
 }
 

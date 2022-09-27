@@ -10,7 +10,7 @@ type Product = {
 
 const ProjectCard = ({ title, disc, image, link, type }: Product) => {
   return (
-    <div className="snap-center h-full min-w-[20rem] md:min-w-[24rem] max-w-lg m-4 rounded-xl shadow-md bg-gray-900 border-solid border border-sky-600 hover:shadow-sky-400 text-gray-100 mx-3 hover:scale-105 duration-500">
+    <div className="snap-center h-full min-w-[20rem] md:min-w-[24rem] max-w-lg m-4 rounded-xl shadow-md bg-gray-900 border-solid border border-sky-600 hover:shadow-sky-400 text-gray-100 mx-3 duration-500">
       <img
         src={image}
         alt=""
