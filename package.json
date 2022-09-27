@@ -13,13 +13,9 @@
     "@types/node": "^16.11.39",
     "@types/react": "^18.0.12",
     "@types/react-dom": "^18.0.5",
-    "eslint": "^8.9.0",
-    "eslint-config-prettier": "^8.4.0",
-    "eslint-plugin-prettier": "^4.0.0",
     "firebase": "^9.8.3",
     "framer-motion": "^7.2.1",
     "preline": "^1.1.2",
-    "prettier": "^2.5.1",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-scripts": "5.0.1",
@@ -55,7 +51,11 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.8",
+    "eslint": "^8.9.0",
+    "eslint-config-prettier": "^8.4.0",
+    "eslint-plugin-prettier": "^4.0.0",
     "postcss": "^8.4.16",
+    "prettier": "^2.5.1",
     "tailwind-scrollbar": "^2.0.1",
     "tailwindcss": "^3.1.8"
   }
