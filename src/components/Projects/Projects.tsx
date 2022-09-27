@@ -14,9 +14,9 @@ type Product = {
 const ProjectSection = () => {
   const { projects, isLoaded } = useContext(ApiContext);
 
-  const mobileProj = projects.filter((proj: Product) => {
-    return proj.type.includes("mobile");
-  });
+  // const mobileProj = projects.filter((proj: Product) => {
+  //   return proj.type.includes("mobile");
+  // });
 
   return (
     <motion.div
@@ -33,23 +33,23 @@ const ProjectSection = () => {
             </span>
             <h2 className="text-4xl font-bold lg:text-5xl">PROJECTS</h2>
           </div>
-          <div className="flex flex-wrap items-stretch justify-center -mx-4">
+          <div className="relative w-full py-6 overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 flex scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-sky-400/80">
+            <div className="min-w-[48rem]"></div>
             {isLoaded ? (
-              mobileProj.map(
-                (item: Product, i: React.Key | null | undefined) => (
-                  <ProjectCard
-                    key={i}
-                    image={item.image}
-                    title={item.title}
-                    disc={item.disc}
-                    link={item.link}
-                    type={item.type}
-                  />
-                )
-              )
+              projects.map((item: Product, i: React.Key | null | undefined) => (
+                <ProjectCard
+                  key={i}
+                  image={item.image}
+                  title={item.title}
+                  disc={item.disc}
+                  link={item.link}
+                  type={item.type}
+                />
+              ))
             ) : (
               <h3>Looks Like we had a problem. Try Refreshing the page</h3>
             )}
+            <div className="min-w-[48rem]"></div>
           </div>
         </div>
       </section>

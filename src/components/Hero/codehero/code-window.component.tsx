@@ -11,7 +11,7 @@ const CodeWindow = () => {
     <section className="rounded-xl min-h-[60vh] border-solid border-2 border-sky-400 shadow-sky-400 shadow-md text-gray-100 p-3">
       <WindowNav />
       <div className="container flex flex-col justify-center p-6 mx-auto sm:py-10 lg:py-20 xl:py-32 lg:flex-row lg:justify-between">
-        <div className="flex flex-col justify-center p-6 items-center md:items-start text-center rounded-sm lg:max-w-md xl:max-w-4xl lg:text-left">
+        <div className="flex flex-col justify-center p-6 items-center lg:items-start text-center rounded-sm lg:max-w-md xl:max-w-4xl lg:text-left">
           <Typewriter
             options={{
               wrapperClassName: " text-5xl md:text-7xl ",

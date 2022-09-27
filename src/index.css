@@ -1,17 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Courgette&family=Maven+Pro&family=Nunito+Sans&family=Source+Sans+Pro&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa&family=Courgette&family=Maven+Pro&family=Nunito+Sans&family=Source+Sans+Pro&display=swap");
 
 body {
   margin: 0;
+  overflow-y: hidden;
+  overflow-x: clip;
+  width: 100vw;
+  scroll-behavior: smooth;
 }
 
 html {
   scroll-behavior: smooth;
 }
-
-.child {
-  /* scroll-snap-align: center; */
-}
-
 
 @tailwind base;
 
