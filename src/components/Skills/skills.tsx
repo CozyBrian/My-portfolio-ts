@@ -27,7 +27,7 @@ const SkillView = () => {
                 </p>
                 <div className="font-bold text-lg">Languages I speak</div>
                 <p className="leading-relaxed text-center">
-                  HTML, Scss, javascript, typescript
+                  HTML, Scss, Javascript/Typescript
                 </p>
                 <div className="font-bold text-lg">Dev Tools</div>
                 <ul className="flex-1 space-y-1">
@@ -45,6 +45,9 @@ const SkillView = () => {
                   </li>
                   <li className="flex items-center justify-center space-x-2">
                     Tailwindcss
+                  </li>
+                  <li className="flex items-center justify-center space-x-2">
+                    Figma
                   </li>
                 </ul>
               </motion.div>
@@ -67,7 +70,7 @@ const SkillView = () => {
                 </p>
                 <div className="font-bold text-lg">Languages I speak</div>
                 <p className="leading-relaxed text-center">
-                  python, javascript, java, c++
+                  Python, Javascript, Java, C++
                 </p>
                 <div className="font-bold text-lg">Dev Tools</div>
                 <ul className="flex-1 space-y-1">

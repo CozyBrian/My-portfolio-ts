@@ -65,7 +65,7 @@ const Header = ({ pagerefs }: Props) => {
                 viewBox="0 0 16 16"
               >
                 <path
-                  fill-rule="evenodd"
+                  fillRule="evenodd"
                   d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
                 />
               </svg>
@@ -85,6 +85,7 @@ const Header = ({ pagerefs }: Props) => {
         <div className="sm:flex flex-row justify-center items-center hidden overflow-hidden">
           {sections.map((item) => (
             <a
+              key={item.title}
               href={item.href}
               className="px-2 hover:text-gray-200 transition-all duration-100 hLink"
             >
@@ -114,6 +115,7 @@ const Header = ({ pagerefs }: Props) => {
           >
             {sections.map((item) => (
               <a
+                key={item.title}
                 href={item.href}
                 className="p-2 text-gray-200 hover:text-slate-400 transition-all duration-100"
                 onClick={() => setOpen(!isOpen)}
