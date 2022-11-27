@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
 import WindowNav from "./window-nav";
 
 const CodeWindow = () => {
+  const [profileLoaded, setProfileLoaded] = useState(false);
   const profile =
     "https://firebasestorage.googleapis.com/v0/b/my-portfolio-35b84.appspot.com/o/Profile.jpg?alt=media&token=3c8c8853-722a-4d4c-9d59-f048b6f7e3ee";
 
@@ -55,10 +56,11 @@ const CodeWindow = () => {
         <div className="flex items-center justify-center h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
           <motion.div
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 0.2 }}
+            animate={{ opacity: profileLoaded ? 1 : 0 }}
+            transition={{ duration: 1 }}
           >
             <img
+              onLoad={() => setProfileLoaded(true)}
               src={profile}
               alt=""
               className="object-cover h-72 sm:h-80 lg:h-96 lg:w-96 xl:h-112 2xl:h-128 rounded-full p-5"
