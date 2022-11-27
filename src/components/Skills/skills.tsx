@@ -75,7 +75,7 @@ const SkillView = () => {
                   Technologies I use to bring functionality to these beautiful
                   applications.
                 </p>
-                <div className="font-bold text-lg">Languages I speak</div>
+                <div className="font-bold text-lg">Languages</div>
                 <div className="flex flex-row gap-4 leading-relaxed text-center">
                   {BElanguages.map((item, i) => (
                     <div
