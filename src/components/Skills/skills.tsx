@@ -1,7 +1,12 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "framer-motion";
 import { faWindowMaximize, faServer } from "@fortawesome/free-solid-svg-icons";
-import React from "react";
+import {
+  BElanguages,
+  BETechnologies,
+  FElanguages,
+  FETechnologies,
+} from "../../constants";
 
 const SkillView = () => {
   return (
@@ -25,30 +30,32 @@ const SkillView = () => {
                   The technologies I use to make elegant simple user interfaces
                   and user experiences
                 </p>
-                <div className="font-bold text-lg">Languages I speak</div>
-                <p className="leading-relaxed text-center">
-                  HTML, Scss, Javascript/Typescript
-                </p>
-                <div className="font-bold text-lg">Dev Tools</div>
-                <ul className="flex-1 space-y-1">
-                  <li className="flex items-center justify-center space-x-2">
-                    React.js
-                  </li>
-                  <li className="flex items-center justify-center space-x-2">
-                    Next.js
-                  </li>
-                  <li className="flex items-center justify-center space-x-2">
-                    Flutter
-                  </li>
-                  <li className="flex items-center justify-center space-x-2">
-                    React Native
-                  </li>
-                  <li className="flex items-center justify-center space-x-2">
-                    Tailwindcss
-                  </li>
-                  <li className="flex items-center justify-center space-x-2">
-                    Figma
-                  </li>
+                <div className="font-bold text-lg">Languages</div>
+                <div className="flex flex-row gap-4 leading-relaxed text-center">
+                  {FElanguages.map((item, i) => (
+                    <div
+                      className="flex flex-col items-center justify-center"
+                      key={i}
+                    >
+                      <img className="h-12" src={item.src} alt={item.title} />
+                    </div>
+                  ))}
+                </div>
+                <div className="font-bold text-lg">Dev Technologies</div>
+                <ul className="grid grid-cols-3 gap-4">
+                  {FETechnologies.map((item, i) => (
+                    <li
+                      className="flex flex-col items-center justify-center"
+                      key={i}
+                    >
+                      <img
+                        className="h-12 mb-2"
+                        src={item.src}
+                        alt={item.title}
+                      />
+                      <p className="text-sm">{item.title}</p>
+                    </li>
+                  ))}
                 </ul>
               </motion.div>
             </div>
@@ -69,29 +76,31 @@ const SkillView = () => {
                   applications.
                 </p>
                 <div className="font-bold text-lg">Languages I speak</div>
-                <p className="leading-relaxed text-center">
-                  Python, Javascript, Java, C++
-                </p>
-                <div className="font-bold text-lg">Dev Tools</div>
-                <ul className="flex-1 space-y-1">
-                  <li className="flex items-center justify-center space-x-2">
-                    Node.js
-                  </li>
-                  <li className="flex items-center justify-center space-x-2">
-                    Firebase
-                  </li>
-                  <li className="flex items-center justify-center space-x-2">
-                    PostgreSql
-                  </li>
-                  <li className="flex items-center justify-center space-x-2">
-                    Express.js
-                  </li>
-                  <li className="flex items-center justify-center space-x-2">
-                    MongoDB
-                  </li>
-                  <li className="flex items-center justify-center space-x-2">
-                    Git
-                  </li>
+                <div className="flex flex-row gap-4 leading-relaxed text-center">
+                  {BElanguages.map((item, i) => (
+                    <div
+                      className="flex flex-col items-center justify-center"
+                      key={i}
+                    >
+                      <img className="h-12" src={item.src} alt={item.title} />
+                    </div>
+                  ))}
+                </div>
+                <div className="font-bold text-lg">Dev Technologies</div>
+                <ul className="grid grid-cols-3 gap-4">
+                  {BETechnologies.map((item, i) => (
+                    <li
+                      className="flex flex-col items-center justify-center"
+                      key={i}
+                    >
+                      <img
+                        className="h-12 mb-2"
+                        src={item.src}
+                        alt={item.title}
+                      />
+                      <p className="text-sm">{item.title}</p>
+                    </li>
+                  ))}
                 </ul>
               </motion.div>
             </div>
