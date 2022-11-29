@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className=" bg-gray-800  text-gray-50">
       <div className="container flex flex-col p-4 mx-auto md:p-8 lg:flex-row justify-between divide-gray-400">
         <div className="py-6 text-sm text-center  text-gray-400">
-          © 2022 Briton Tech. All rights reserved.
+          © 2022 Brian Newton
         </div>
         <div className="flex flex-col justify-center pt-6 lg:pt-0">
           <div className="flex justify-center space-x-4">

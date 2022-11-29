@@ -12,6 +12,7 @@ const Header = ({ pagerefs }: Props) => {
   const isVisible = useOnScreen(pagerefs[0]);
   const isVisible1 = useOnScreen(pagerefs[1]);
   const isVisible2 = useOnScreen(pagerefs[2]);
+  const isVisible3 = useOnScreen(pagerefs[3]);
 
   const navlink = document.getElementsByClassName("hLink");
 
@@ -25,6 +26,9 @@ const Header = ({ pagerefs }: Props) => {
     isVisible2
       ? navlink[2].classList.add("text-sky-500")
       : navlink[2].classList.remove("text-sky-500");
+    isVisible3
+      ? navlink[3].classList.add("text-sky-500")
+      : navlink[3].classList.remove("text-sky-500");
   });
 
   const sections = [
@@ -40,6 +44,10 @@ const Header = ({ pagerefs }: Props) => {
       title: "Projects",
       href: "#projects",
     },
+    {
+      title: "Contact",
+      href: "#contact",
+    },
   ];
 
   return (
@@ -49,7 +57,9 @@ const Header = ({ pagerefs }: Props) => {
       } flex w-full z-50 items-center justify-center fixed top-0`}
     >
       <div className="container flex flex-row justify-between items-center h-full px-2 sm:px-24 text-gray-400">
-        <h4 className="text-white opacity-100 text-xl">Brian Newton</h4>
+        <h4 className="text-white opacity-100 text-xl font-['Nunito_Sans']">
+          Brian Newton
+        </h4>
         <div className="sm:hidden">
           <button
             onClick={() => setOpen(!isOpen)}

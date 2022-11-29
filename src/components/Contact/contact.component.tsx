@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { AnimatePresence, LayoutGroup, motion } from "framer-motion";
+import emailjs from "@emailjs/browser";
+import { Oval } from "react-loader-spinner";
 
 // contact interface
 interface ContactInterface {
@@ -15,16 +17,38 @@ const ContactView = () => {
     formState: { errors },
     handleSubmit,
   } = useForm<ContactInterface>();
-  const onSubmit: SubmitHandler<ContactInterface> = (data) => console.log(data);
+  const [isLoading, setIsLoading] = useState(false);
+  const [isEmailSent, setIsEmailSent] = useState(false);
 
-  const form = [
-    { title: "Name", type: "name", placeholder: "Name is required...🥲" },
-    { title: "Email", type: "email", placeholder: "Email is required...😅" },
-    {
-      title: "Message",
-      type: "message",
-      placeholder: "Message is required...lol",
-    },
+  const onSubmit: SubmitHandler<ContactInterface> = (data) => {
+    setIsLoading(true);
+    emailjs
+      .send(
+        "service_c4fqdo8",
+        "template_2rxlopw",
+        { ...data },
+        process.env.REACT_APP_EMAILJS_KEY
+      )
+      .then(
+        (result) => {
+          setIsEmailSent(true);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      )
+      .finally(() => {
+        setIsLoading(false);
+      });
+  };
+
+  const form: {
+    title: string;
+    type: "name" | "email" | "message";
+    error_text: string;
+  }[] = [
+    { title: "Name", type: "name", error_text: "Name is required...🥲" },
+    { title: "Email", type: "email", error_text: "Email is required...😅" },
   ];
 
   return (
@@ -44,111 +68,168 @@ const ContactView = () => {
             layout="position"
             className="container flex justify-center items-center"
           >
-            <form
-              className="flex flex-col gap-3 w-[28rem]"
-              onSubmit={handleSubmit(onSubmit)}
-            >
-              <LayoutGroup>
-                <LayoutGroup>
-                  <motion.div layout="position" className="flex flex-col gap-2">
-                    <LayoutGroup>
-                      <motion.div className="flex flex-col" layout="position">
-                        <label className="text-slate-100 pb-2">Name</label>
-                        <input
-                          className="w-full p-2 border rounded-xl text-lg border-none outline-none bg-slate-600 focus:text-slate-800 text-slate-300 focus:bg-white focus:placeholder:text-gray-300 duration-150"
-                          placeholder="Name"
-                          {...register("name", {
-                            required: "Name is Required...lol",
-                          })}
-                          aria-invalid={errors.name ? "true" : "false"}
-                        />
-                      </motion.div>
-                    </LayoutGroup>
-                    <AnimatePresence>
-                      {errors.name && (
-                        <motion.p
+            <AnimatePresence mode="wait">
+              {!isEmailSent ? (
+                <form
+                  className="flex flex-col gap-3 w-[28rem]"
+                  onSubmit={handleSubmit(onSubmit)}
+                >
+                  <LayoutGroup>
+                    {form.map((item, i) => (
+                      <LayoutGroup key={`form-input-${i}`}>
+                        <motion.div
                           layout="position"
-                          initial={{ opacity: 0 }}
-                          animate={{ opacity: 1 }}
-                          exit={{ opacity: 0 }}
-                          className="self-end text-sm text-red-400"
-                          role="alert"
+                          initial={{ opacity: 0, x: i === 0 ? -50 : 50 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          viewport={{ once: true }}
+                          transition={{ duration: 0.8, delay: i * 0.2 }}
+                          className="flex flex-col gap-2"
                         >
-                          {errors.name?.message}
-                        </motion.p>
-                      )}
-                    </AnimatePresence>
-                  </motion.div>
-                </LayoutGroup>
-                <LayoutGroup>
-                  <motion.div layout="position" className="flex flex-col gap-2">
+                          <LayoutGroup>
+                            <motion.div
+                              className="flex flex-col"
+                              layout="position"
+                            >
+                              <label className="text-slate-100 pb-2">
+                                {item.title}
+                              </label>
+                              <input
+                                className="w-full p-2 border rounded-xl text-lg border-none outline-none bg-slate-600 focus:text-slate-800 text-slate-300 focus:bg-white focus:placeholder:text-gray-300 duration-150"
+                                placeholder={item.title}
+                                {...register(item.type, {
+                                  required: item.error_text,
+                                  pattern:
+                                    item.type === "email"
+                                      ? /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/ // regex for email
+                                      : undefined,
+                                })}
+                                aria-invalid={
+                                  errors[item.type] ? "true" : "false"
+                                }
+                              />
+                            </motion.div>
+                          </LayoutGroup>
+                          <AnimatePresence>
+                            <>
+                              {errors[item.type] && (
+                                <motion.p
+                                  layout="position"
+                                  initial={{ opacity: 0 }}
+                                  animate={{ opacity: 1 }}
+                                  exit={{ opacity: 0 }}
+                                  className="self-end text-sm text-red-400"
+                                  role="alert"
+                                >
+                                  {errors[item.type]?.message}
+                                </motion.p>
+                              )}
+                              {errors[item.type]?.type === "pattern" && (
+                                <motion.p
+                                  layout="position"
+                                  initial={{ opacity: 0 }}
+                                  animate={{ opacity: 1 }}
+                                  exit={{ opacity: 0 }}
+                                  className="self-end text-sm text-red-400"
+                                  role="alert"
+                                >
+                                  Please enter a valid email address
+                                </motion.p>
+                              )}
+                            </>
+                          </AnimatePresence>
+                        </motion.div>
+                      </LayoutGroup>
+                    ))}
                     <LayoutGroup>
-                      <motion.div className="flex flex-col" layout="position">
-                        <label className="text-slate-100 pb-2">Email</label>
-                        <input
-                          className="w-full p-2 border rounded-xl text-lg border-none outline-none bg-slate-600 focus:text-slate-800 text-slate-300 focus:bg-white focus:placeholder:text-gray-300 duration-150"
-                          placeholder="Email"
-                          {...register("email", {
-                            required: "Email is Required...😅",
-                          })}
-                        />
+                      <motion.div
+                        initial={{ opacity: 0, x: -50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8, delay: 0.4 }}
+                        layout="position"
+                        className="flex flex-col gap-2"
+                      >
+                        <motion.div className="flex flex-col" layout="position">
+                          <label className="text-slate-100 pb-2">Message</label>
+                          <div className="rounded-xl overflow-clip">
+                            <textarea
+                              rows={4}
+                              className="w-full p-2 border rounded-xl text-lg border-none outline-none bg-slate-600 focus:text-slate-800 text-slate-300 focus:bg-white focus:placeholder:text-gray-300 duration-150 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-sky-400/80"
+                              placeholder="Message..."
+                              {...register("message", {
+                                required: "Message is Required...🥲",
+                              })}
+                            />
+                          </div>
+                        </motion.div>
+                        <AnimatePresence>
+                          {errors.message && (
+                            <motion.p
+                              initial={{ opacity: 0 }}
+                              animate={{ opacity: 1 }}
+                              exit={{ opacity: 0 }}
+                              className="self-end text-sm text-red-400"
+                              role="alert"
+                            >
+                              {errors.message?.message}
+                            </motion.p>
+                          )}
+                        </AnimatePresence>
                       </motion.div>
                     </LayoutGroup>
-                    <AnimatePresence>
-                      {errors.email && (
-                        <motion.p
-                          initial={{ opacity: 0 }}
-                          animate={{ opacity: 1 }}
-                          exit={{ opacity: 0 }}
-                          className="self-end text-sm text-red-400"
-                          role="alert"
-                        >
-                          {errors.email?.message}
-                        </motion.p>
-                      )}
-                    </AnimatePresence>
-                  </motion.div>
-                </LayoutGroup>
-                <LayoutGroup>
-                  <motion.div layout="position" className="flex flex-col gap-2">
-                    <motion.div className="flex flex-col" layout="position">
-                      <label className="text-slate-100 pb-2">Message</label>
-                      <div className="rounded-xl overflow-clip">
-                        <textarea
-                          rows={4}
-                          className="w-full p-2 border rounded-xl text-lg border-none outline-none bg-slate-600 focus:text-slate-800 text-slate-300 focus:bg-white focus:placeholder:text-gray-300 duration-150 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-sky-400/80"
-                          placeholder="Message..."
-                          {...register("message", {
-                            required: "Message is Required...🥲",
-                          })}
-                        />
-                      </div>
+                    <motion.div layout className="flex justify-center my-4">
+                      <button
+                        className="flex justify-center bg-sky-500 hover:bg-sky-600 active:bg-sky-700 text-slate-800 hover:text-slate-200 w-32 px-4 py-2 rounded-full font-bold tracking-wider uppercase text-xl duration-150"
+                        type="submit"
+                      >
+                        {isLoading ? (
+                          <Oval
+                            height={24}
+                            width={24}
+                            strokeWidth={6}
+                            color="rgba(255, 255, 255, 1)"
+                            secondaryColor="rgba(255, 255, 255, 0.49)"
+                          />
+                        ) : (
+                          "SUBMIT"
+                        )}
+                      </button>
                     </motion.div>
-                    <AnimatePresence>
-                      {errors.message && (
-                        <motion.p
-                          initial={{ opacity: 0 }}
-                          animate={{ opacity: 1 }}
-                          exit={{ opacity: 0 }}
-                          className="self-end text-sm text-red-400"
-                          role="alert"
+                  </LayoutGroup>
+                </form>
+              ) : (
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  className="min-h-[40vh] flex justify-center items-center"
+                >
+                  <p className="text-3xl uppercase font-bold">
+                    {"Thank You for reaching out!🎉"
+                      .split(" ")
+                      .map((word, i) => (
+                        <motion.span
+                          initial={{}}
+                          animate={{
+                            fontSize: ["1.875rem", "2.125rem", "1.875rem"],
+                            color: [
+                              "rgb(255, 255, 255)",
+                              "rgb(14, 165, 233)",
+                              "rgb(255, 255, 255)",
+                            ],
+                          }}
+                          viewport={{ once: true }}
+                          transition={{ delay: i * 0.2 }}
+                          key={`word${i}`}
                         >
-                          {errors.message?.message}
-                        </motion.p>
-                      )}
-                    </AnimatePresence>
-                  </motion.div>
-                </LayoutGroup>
-                <motion.div layout className="flex justify-center my-4">
-                  <button
-                    className="bg-sky-500 text-slate-800 hover:text-slate-200 w-32 px-4 py-2 rounded-full font-bold tracking-wider uppercase text-xl duration-150"
-                    type="submit"
-                  >
-                    SUBMIT
-                  </button>
+                          {word}
+                          {` `}
+                        </motion.span>
+                      ))}
+                  </p>
                 </motion.div>
-              </LayoutGroup>
-            </form>
+              )}
+            </AnimatePresence>
           </motion.div>
 
           <motion.div

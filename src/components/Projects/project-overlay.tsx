@@ -10,9 +10,10 @@ const ProjectOverlay = () => {
   const CardRef = useRef(null);
   const [click, setClick] = useState(1);
 
+  const close = require("../../assets/close.png");
+
   useMouseOverCallback(CardRef, () => {
     setClick(click + 1);
-    console.log("clicked");
     if (click > 1) {
       closeOverlay();
     }
@@ -28,8 +29,14 @@ const ProjectOverlay = () => {
       <motion.div
         ref={CardRef}
         id="detail-project-card"
-        className="w-full md:w-[1000px] m-4 h-[79%] sm:h-4/5 flex overflow-clip flex-col bg-slate-800 rounded-xl"
+        className="relative w-full md:w-[1000px] m-4 h-[79%] sm:h-4/5 flex overflow-clip flex-col bg-slate-800 rounded-xl"
       >
+        <div
+          onClick={() => closeOverlay()}
+          className="absolute right-2 top-2 w-8 h-8 p-2"
+        >
+          <img className="w-full h-full" src={close} alt="close" />
+        </div>
         <motion.div
           initial={{ height: "40%" }}
           animate={{ height: fullImage ? "200%" : "40%" }}

@@ -49,7 +49,6 @@ const ApiContextProvider = ({ children, db }: Props) => {
       .then((snapshot) => {
         if (snapshot.exists()) {
           setProjects(snapshot.val());
-          console.log("Loaded");
           setIsLoaded(true);
         }
       })
