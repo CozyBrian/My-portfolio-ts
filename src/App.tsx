@@ -62,7 +62,11 @@ function App() {
             <ProjectSection />
           </section>
         </ApiContextProvider>
-        <section ref={contactref} className="md:snap-start" id="contact">
+        <section
+          ref={contactref}
+          className="md:snap-center flex flex-col"
+          id="contact"
+        >
           <ContactView />
           <Footer />
         </section>
