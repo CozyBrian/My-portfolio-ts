@@ -63,7 +63,7 @@ const ProjectOverlay = () => {
               <button
                 type="button"
                 onClick={() => {}}
-                className="flex items-center justify-center min-w-[95px] px-2 py-2 font-semibold rounded-md hover:bg-slate-600 bg-slate-500 "
+                className="flex items-center justify-center min-w-[95px] px-2 py-2 font-semibold rounded-md hover:bg-slate-600 bg-slate-500 duration-150"
               >
                 View Live
               </button>
@@ -72,7 +72,7 @@ const ProjectOverlay = () => {
               <button
                 type="button"
                 onClick={() => {}}
-                className="flex items-center justify-center min-w-[95px] px-2 py-2 font-semibold rounded-md hover:bg-slate-600 bg-slate-500 "
+                className="flex items-center justify-center min-w-[95px] px-2 py-2 font-semibold rounded-md hover:bg-slate-600 bg-slate-500 duration-150"
               >
                 GitHub
               </button>

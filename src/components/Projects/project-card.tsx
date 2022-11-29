@@ -37,7 +37,7 @@ const ProjectCard = ({ item, onClick }: Props) => {
         <button
           type="button"
           onClick={() => onClick(item)}
-          className="flex items-center justify-center px-3 py-2 font-semibold rounded-sm hover:bg-sky-600 bg-sky-500 "
+          className="flex items-center justify-center px-3 py-2 font-semibold rounded-sm hover:bg-sky-600 bg-sky-500 duration-150"
         >
           View More
         </button>
