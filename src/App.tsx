@@ -7,7 +7,9 @@ import Footer from "./components/Layout/footer/footer.component";
 import Header from "./components/Layout/header/header.component";
 import ProjectSection from "./components/Projects/Projects";
 import SkillView from "./components/Skills/skills";
-import ApiContextProvider from "./services/api.context";
+import ApiContextProvider, { useApiContext } from "./services/api.context";
+import { AnimatePresence } from "framer-motion";
+import ProjectOverlay from "./components/Projects/project-overlay";
 
 const firebaseConfig = {
   apiKey: `${process.env.REACT_APP_FIREBASE_KEY}`,
@@ -36,29 +38,30 @@ function App() {
     <div className="h-screen snap-y scroll-smooth snap-mandatory overflow-y-scroll overflow-x-hidden overflow-x-clip scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-sky-400/80">
       <div className="m-0 bg-slate-900 " id="home">
         <Header pagerefs={pagerefs} />
-        <section
-          ref={homeref}
-          id="home"
-          className="min-h-screen flex flex-col justify-center md:snap-center"
-        >
-          <CodeHero />
-        </section>
-        <section
-          id="skills"
-          ref={skillref}
-          className="min-h-screen flex flex-col justify-center md:snap-center"
-        >
-          <SkillView />
-        </section>
-        <section
-          id="projects"
-          ref={projectref}
-          className="min-h-screen flex flex-col justify-center md:snap-center"
-        >
-          <ApiContextProvider db={database}>
+        <ApiContextProvider db={database}>
+          <OverlayContainer />
+          <section
+            ref={homeref}
+            id="home"
+            className="min-h-screen flex flex-col justify-center md:snap-center"
+          >
+            <CodeHero />
+          </section>
+          <section
+            id="skills"
+            ref={skillref}
+            className="min-h-screen flex flex-col justify-center md:snap-center"
+          >
+            <SkillView />
+          </section>
+          <section
+            id="projects"
+            ref={projectref}
+            className="relative min-h-screen flex flex-col justify-center md:snap-center"
+          >
             <ProjectSection />
-          </ApiContextProvider>
-        </section>
+          </section>
+        </ApiContextProvider>
         <section ref={contactref} className="md:snap-start" id="contact">
           <ContactView />
           <Footer />
@@ -67,5 +70,12 @@ function App() {
     </div>
   );
 }
+
+const OverlayContainer = () => {
+  const { overlayIsOpen } = useApiContext();
+  return (
+    <AnimatePresence>{overlayIsOpen && <ProjectOverlay />}</AnimatePresence>
+  );
+};
 
 export default App;
