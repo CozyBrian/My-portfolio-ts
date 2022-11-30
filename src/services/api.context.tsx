@@ -48,7 +48,11 @@ const ApiContextProvider = ({ children, db }: Props) => {
     get(child(dbRef, `Projects/`))
       .then((snapshot) => {
         if (snapshot.exists()) {
-          setProjects(snapshot.val());
+          let tempProjects: Product[] = [];
+          Object.entries(snapshot.val()).forEach(([key, value], index) => {
+            tempProjects.push(value as Product);
+          });
+          setProjects(tempProjects);
           setIsLoaded(true);
         }
       })
