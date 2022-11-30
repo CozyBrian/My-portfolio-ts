@@ -5,5 +5,5 @@ export type Product = {
   disc: string;
   link: string;
   type: string;
-  tags?: [];
+  tags?: string[];
 };
