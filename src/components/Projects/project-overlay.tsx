@@ -66,15 +66,17 @@ const ProjectOverlay = () => {
             </>
           )}
           <div className="flex flex-row flex-wrap gap-4 my-8">
-            <a href={item?.link} target="_blank" rel="noreferrer">
-              <button
-                type="button"
-                onClick={() => {}}
-                className="flex items-center justify-center min-w-[95px] px-2 py-2 font-semibold rounded-md hover:bg-slate-600 bg-slate-500 duration-150"
-              >
-                View Live
-              </button>
-            </a>
+            {item?.type === "web" && (
+              <a href={item?.live} target="_blank" rel="noreferrer">
+                <button
+                  type="button"
+                  onClick={() => {}}
+                  className="flex items-center justify-center min-w-[95px] px-2 py-2 font-semibold rounded-md hover:bg-slate-600 bg-slate-500 duration-150"
+                >
+                  View Live
+                </button>
+              </a>
+            )}
             <a href={item?.link} target="_blank" rel="noreferrer">
               <button
                 type="button"

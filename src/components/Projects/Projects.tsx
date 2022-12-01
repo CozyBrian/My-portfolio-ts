@@ -27,13 +27,11 @@ const ProjectSection = () => {
             <div className="container lg:px-20">
               <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4 duration-150">
                 {isLoaded ? (
-                  projects.map(
-                    (item: Product, i: React.Key | null | undefined) => (
-                      <div className="flex justify-center" key={i}>
-                        <ProjectCard key={i} item={item} onClick={setItem} />
-                      </div>
-                    )
-                  )
+                  projects.map((item) => (
+                    <div className="flex justify-center" key={item.id}>
+                      <ProjectCard item={item} onClick={setItem} />
+                    </div>
+                  ))
                 ) : (
                   <h3>Looks Like we had a problem. Try Refreshing the page</h3>
                 )}

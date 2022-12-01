@@ -4,6 +4,7 @@ export type Product = {
   title: string;
   disc: string;
   link: string;
-  type: string;
+  live: string;
+  type: "web" | "mobile";
   tags?: string[];
 };
