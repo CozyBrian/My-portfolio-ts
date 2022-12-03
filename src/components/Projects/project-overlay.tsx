@@ -46,7 +46,7 @@ const ProjectOverlay = () => {
         >
           <Img
             className="w-full h-full object-contain"
-            src={item?.image}
+            src={item?.image[0]}
             alt={item?.title}
           />
         </motion.div>
@@ -57,8 +57,8 @@ const ProjectOverlay = () => {
             <>
               <p className="text-md my-2 italic">Built with:</p>
               <div className="flex flex-row gap-2 flex-wrap">
-                {item?.tags.map((tag) => (
-                  <div className="bg-slate-600 p-1 px-3 rounded-full">
+                {item?.tags.map((tag, k) => (
+                  <div key={k} className="bg-slate-600 p-1 px-3 rounded-full">
                     {tag}
                   </div>
                 ))}

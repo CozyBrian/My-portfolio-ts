@@ -57,6 +57,7 @@ const ApiContextProvider = ({ children, db }: Props) => {
         }
       })
       .catch((e) => {
+        setIsLoaded(false);
         console.error(e);
       });
   };

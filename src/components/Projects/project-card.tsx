@@ -43,7 +43,7 @@ const ProjectCard = ({ item, onClick }: Props) => {
         </button>
       </motion.div>
       <Img
-        src={item.image}
+        src={item.image[0]}
         alt={item.title}
         className="h-full object-cover object-center w-full bg-gray-500"
       />
