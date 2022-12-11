@@ -34,10 +34,10 @@ const CodeWindow = () => {
             transition={{ duration: 1, delay: 2.75 }}
           >
             <p className="text-gray-300 pt-2 pb-4 text-xl font-['Nunito_Sans']">
-              I’m a Full-stack software developer based in Ghana. I love to
-              build mobile and web applications that improve the lives of people
-              all around the world and I’m very passionate about connecting the
-              dots between ideas and reality with code.
+              I’m a Full-stack software developer and I love to build mobile and
+              web applications that improve the lives of people all around the
+              world and I’m very passionate about connecting the dots between
+              ideas and reality with code.
             </p>
           </motion.div>
           <motion.div
