@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import ProjectCard from "./project-card";
-import { Product } from "../../@types";
 
 import { useApiContext } from "../../services/api.context";
 
