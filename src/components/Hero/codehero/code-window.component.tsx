@@ -8,6 +8,15 @@ const CodeWindow = () => {
   const profile =
     "https://firebasestorage.googleapis.com/v0/b/my-portfolio-35b84.appspot.com/o/Profile.jpg?alt=media&token=3c8c8853-722a-4d4c-9d59-f048b6f7e3ee";
 
+  const ChangeNameColor = (timeOut: number) => {
+    const NameElement = document.getElementsByClassName("typewriter");
+    setTimeout(() => {
+      NameElement[0].classList.add("typewriter-hover");
+    }, timeOut);
+  };
+
+  const delayFactor = 0.5;
+  const BaseTime = 2.1;
   return (
     <section className="rounded-xl min-h-[60vh] border-solid border-2 border-sky-400 shadow-sky-400 shadow-md text-gray-100 p-2 md:p-3">
       <WindowNav />
@@ -24,14 +33,17 @@ const CodeWindow = () => {
                 .changeDelay(75)
                 .typeString("Hello, I'm ")
                 .typeString(`<span class="typewriter">Brian Newton</span>`)
-                .start();
+                .start()
+                .callFunction(() => {
+                  ChangeNameColor(delayFactor * 4 * 1000);
+                });
             }}
           />
 
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 2.75 }}
+            transition={{ duration: 1, delay: BaseTime + delayFactor * 2 }}
           >
             <p className="text-gray-300 pt-2 pb-4 text-xl font-['Nunito_Sans']">
               I’m a Full-stack software developer based in Ghana. I love to
@@ -43,7 +55,7 @@ const CodeWindow = () => {
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 2.9 }}
+            transition={{ duration: 1, delay: BaseTime + delayFactor * 3 }}
           >
             <a href="#contact" rel="noopener noreferrer">
               <button
@@ -59,7 +71,7 @@ const CodeWindow = () => {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: profileLoaded ? 1 : 0 }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 1, delay: BaseTime + delayFactor }}
           >
             <img
               onLoad={() => setProfileLoaded(true)}
