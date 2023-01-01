@@ -117,32 +117,44 @@ const Header = ({ pagerefs }: Props) => {
         {isOpen && (
           <motion.div
             layout
-            className=" bg-[#000000a6] flex flex-col justify-start w-full z-10 fixed top-14 p-2 pb-4"
-            initial={{ y: -200 }}
-            animate={{ y: 0 }}
-            exit={{ y: -300 }}
+            className=" bg-[#000000] flex flex-col justify-start items-center w-full h-full z-10 fixed top-14 p-2 pb-4"
+            // initial={{ y: -200 }}
+            // animate={{ y: 0 }}
+            // exit={{ y: -300 }}
+            initial={{ x: "200%" }}
+            animate={{ x: 0 }}
+            exit={{ x: "-100%" }}
             transition={{ bounce: 1 }}
           >
-            {sections.map((item) => (
+            <div className="flex flex-col items-center h-full gap-6 justify-center">
+              {sections.map((item, i) => (
+                <motion.a
+                  initial={{ x: 500, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  transition={{
+                    duration: 0.3,
+                    delay: 0.1 * i,
+                    ease: "easeOut",
+                  }}
+                  key={item.title}
+                  href={item.href}
+                  className="p-2 text-gray-200 hover:text-slate-400 font-['Nunito_Sans'] tracking-wider uppercase text-4xl transition-all duration-100"
+                  onClick={() => setOpen(!isOpen)}
+                >
+                  {item.title}
+                </motion.a>
+              ))}
               <a
-                key={item.title}
-                href={item.href}
-                className="p-2 text-gray-200 hover:text-slate-400 transition-all duration-100"
+                href="https://drive.google.com/file/d/1orD9h-oXvnHpzT50Tb3TfGJxU_ZASWYs/view?usp=sharing"
+                rel="noopener noreferrer"
+                target="_blank"
                 onClick={() => setOpen(!isOpen)}
               >
-                {item.title}
+                <div className="flex items-center font-['Nunito_Sans'] justify-center uppercase px-4 py-2 m-2 duration-200 border border-sky-500 text-2xl font-semibold rounded-md hover:bg-sky-500 text-sky-500 hover:text-gray-900">
+                  Resume
+                </div>
               </a>
-            ))}
-            <a
-              href="https://drive.google.com/file/d/1orD9h-oXvnHpzT50Tb3TfGJxU_ZASWYs/view?usp=sharing"
-              rel="noopener noreferrer"
-              target="_blank"
-              onClick={() => setOpen(!isOpen)}
-            >
-              <div className="flex items-center font-['Nunito_Sans'] justify-center p-1 m-2 duration-200 border border-sky-500 text-lg font-semibold rounded-md w-24 hover:bg-sky-500 text-sky-500 hover:text-gray-900">
-                Resume
-              </div>
-            </a>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

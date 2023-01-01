@@ -42,7 +42,7 @@ const Particle = () => {
           enable: false,
           mode: "repulse",
         },
-        resize: true,
+        resize: false,
       },
       modes: {
         repulse: {
@@ -72,7 +72,7 @@ const Particle = () => {
           default: "out",
         },
         random: false,
-        speed: 1,
+        speed: 0.75,
         straight: false,
       },
       number: {
