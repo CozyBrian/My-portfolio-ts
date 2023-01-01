@@ -17,12 +17,20 @@ const CodeWindow = () => {
   };
 
   const delayFactor = 0.5;
-  const BaseTime = 2.1;
+  const BaseTime = 1.1;
   return (
     <section className="rounded-xl min-h-[60vh] border-solid border-2 border-sky-400 shadow-sky-400 shadow-md text-gray-100 p-2 md:p-3">
       <WindowNav />
       <div className="container flex flex-col justify-center p-1 sm:p-6 mx-auto sm:py-10 lg:py-20 xl:py-32 lg:flex-row lg:justify-between">
         <div className="flex flex-col justify-center p-6 items-center lg:items-start text-center rounded-sm lg:max-w-md xl:max-w-4xl lg:text-left">
+          <motion.span
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-xl md:text-4xl ml-1"
+          >
+            Hello, I'm{" "}
+          </motion.span>
           <Typewriter
             options={{
               wrapperClassName: "text-4xl md:text-7xl",
@@ -32,7 +40,7 @@ const CodeWindow = () => {
             onInit={(typewriter) => {
               typewriter
                 .changeDelay(75)
-                .typeString("Hello, I'm ")
+                // .typeString("Hello, I'm ")
                 .typeString(`<span class="typewriter">Brian Newton</span>`)
                 .start()
                 .callFunction(() => {
@@ -40,13 +48,12 @@ const CodeWindow = () => {
                 });
             }}
           />
-
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: BaseTime + delayFactor * 2 }}
           >
-            <p className="text-gray-300 pt-2 pb-4 text-xl font-['Nunito_Sans']">
+            <p className="text-gray-300 pt-2 pb-4 text-lg md:text-xl font-['Nunito_Sans']">
               I am a <span className="typewriter">full-stack developer</span>{" "}
               with a love for creating mobile and web applications that enhance
               the human experience. My passion lies in bridging the gap between
