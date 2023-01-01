@@ -10,6 +10,7 @@ import SkillView from "./components/Skills/skills";
 import ApiContextProvider, { useApiContext } from "./services/api.context";
 import { AnimatePresence } from "framer-motion";
 import ProjectOverlay from "./components/Projects/project-overlay";
+import Particle from "./components/particles/particles";
 
 const firebaseConfig = {
   apiKey: `${process.env.REACT_APP_FIREBASE_KEY}`,
@@ -35,43 +36,46 @@ function App() {
   const pagerefs = [homeref, skillref, projectref, contactref];
 
   return (
-    <div className="h-screen snap-y scroll-smooth snap-mandatory overflow-y-scroll overflow-x-hidden overflow-x-clip scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-sky-400/80">
-      <div className="m-0 bg-slate-900 " id="home">
-        <Header pagerefs={pagerefs} />
-        <ApiContextProvider db={database}>
-          <OverlayContainer />
+    <>
+      <Particle />
+      <div className="sm:h-screen snap-y scroll-smooth snap-mandatory overflow-y-scroll overflow-x-hidden overflow-x-clip scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-sky-400/80">
+        <div className="m-0" id="home">
+          <Header pagerefs={pagerefs} />
+          <ApiContextProvider db={database}>
+            <OverlayContainer />
+            <section
+              ref={homeref}
+              id="home"
+              className="min-h-screen flex flex-col justify-center md:snap-center"
+            >
+              <CodeHero />
+            </section>
+            <section
+              id="skills"
+              ref={skillref}
+              className="min-h-screen flex flex-col justify-center md:snap-center"
+            >
+              <SkillView />
+            </section>
+            <section
+              id="projects"
+              ref={projectref}
+              className="relative min-h-screen flex flex-col justify-center md:snap-center"
+            >
+              <ProjectSection />
+            </section>
+          </ApiContextProvider>
           <section
-            ref={homeref}
-            id="home"
-            className="min-h-screen flex flex-col justify-center md:snap-center"
+            ref={contactref}
+            className="md:snap-center flex flex-col"
+            id="contact"
           >
-            <CodeHero />
+            <ContactView />
+            <Footer />
           </section>
-          <section
-            id="skills"
-            ref={skillref}
-            className="min-h-screen flex flex-col justify-center md:snap-center"
-          >
-            <SkillView />
-          </section>
-          <section
-            id="projects"
-            ref={projectref}
-            className="relative min-h-screen flex flex-col justify-center md:snap-center"
-          >
-            <ProjectSection />
-          </section>
-        </ApiContextProvider>
-        <section
-          ref={contactref}
-          className="md:snap-center flex flex-col"
-          id="contact"
-        >
-          <ContactView />
-          <Footer />
-        </section>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 
