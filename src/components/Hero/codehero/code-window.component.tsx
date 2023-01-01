@@ -12,6 +12,7 @@ const CodeWindow = () => {
     const NameElement = document.getElementsByClassName("typewriter");
     setTimeout(() => {
       NameElement[0].classList.add("typewriter-hover");
+      NameElement[1].classList.add("typewriter-2-hover");
     }, timeOut);
   };
 
@@ -46,10 +47,10 @@ const CodeWindow = () => {
             transition={{ duration: 1, delay: BaseTime + delayFactor * 2 }}
           >
             <p className="text-gray-300 pt-2 pb-4 text-xl font-['Nunito_Sans']">
-              I’m a Full-stack software developer based in Ghana. I love to
-              build mobile and web applications that improve the lives of people
-              all around the world and I’m very passionate about connecting the
-              dots between ideas and reality with code.
+              I am a <span className="typewriter">full-stack developer</span>{" "}
+              with a love for creating mobile and web applications that enhance
+              the human experience. My passion lies in bridging the gap between
+              ideas and implementation with code.
             </p>
           </motion.div>
           <motion.div

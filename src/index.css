@@ -39,3 +39,13 @@ html {
   transition: 300ms ease-in-out;
   transition-duration: 300ms;
 }
+
+.typewriter-2-hover {
+  color: transparent;
+  background-image: linear-gradient(to right, #38bdf8, #38bdf8);
+  -moz-transition: 300ms ease-in-out;
+  -webkit-transition: 300ms ease-in-out;
+  -o-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+  transition-duration: 300ms;
+}
