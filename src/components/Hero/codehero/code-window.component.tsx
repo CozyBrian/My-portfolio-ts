@@ -19,7 +19,7 @@ const CodeWindow = () => {
   const delayFactor = 0.5;
   const BaseTime = 1.1;
   return (
-    <section className="rounded-xl min-h-[60vh] border-solid border-2 border-sky-400 shadow-sky-400 shadow-md text-gray-100 p-2 md:p-3">
+    <section className="rounded-xl min-h-[60vh] border-solid border border-sky-400 shadow-sky-400  backdrop-blur-sm text-gray-100 p-2 md:p-3">
       <WindowNav />
       <div className="container flex flex-col justify-center p-1 sm:p-6 mx-auto sm:py-10 lg:py-20 xl:py-32 lg:flex-row lg:justify-between">
         <div className="flex flex-col justify-center p-6 items-center lg:items-start text-center rounded-sm lg:max-w-md xl:max-w-4xl lg:text-left">
@@ -27,14 +27,14 @@ const CodeWindow = () => {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-xl md:text-4xl ml-1"
+            className="text-xl md:text-4xl ml-1 font-['Nunito_Sans']"
           >
             Hello, I'm{" "}
           </motion.span>
           <Typewriter
             options={{
-              wrapperClassName: "text-4xl md:text-7xl",
-              cursorClassName: "text-4xl md:text-6xl Typewriter__cursor",
+              wrapperClassName: "text-5xl md:text-7xl",
+              cursorClassName: "text-5xl md:text-6xl Typewriter__cursor",
               autoStart: true,
             }}
             onInit={(typewriter) => {
@@ -75,7 +75,7 @@ const CodeWindow = () => {
             </a>
           </motion.div>
         </div>
-        <div className="flex items-center justify-center h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
+        <div className="flex items-center justify-center h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128 shrink-0">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: profileLoaded ? 1 : 0 }}
@@ -85,7 +85,7 @@ const CodeWindow = () => {
               onLoad={() => setProfileLoaded(true)}
               src={profile}
               alt=""
-              className="object-cover h-72 sm:h-80 lg:h-96 lg:w-96 xl:h-112 2xl:h-128 rounded-full p-5"
+              className="object-cover h-72 sm:h-80 lg:h-96 lg:w-96 xl:h-112 2xl:h-128 rounded-full p-5 shrink-0"
             />
           </motion.div>
         </div>
