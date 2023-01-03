@@ -20,7 +20,7 @@ const SkillView = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 1.5 }}
                 viewport={{ once: true }}
-                className="flex flex-col p-6 space-y-6 justify-center items-center rounded-2xl shadow sm:p-8 border-solid border border-sky-600 hover:shadow-sky-400 hover:bg-sky-600 duration-500 text-gray-100"
+                className="flex flex-col p-6 space-y-6 justify-center items-center rounded-2xl sm:p-8 border-solid border border-sky-600/70 hover:bg-sky-600/70 bg-sky-600/10 backdrop-blur-sm duration-500 text-gray-100"
               >
                 <div className="space-y-2">
                   <FontAwesomeIcon icon={faWindowMaximize} size="8x" />
@@ -65,7 +65,7 @@ const SkillView = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 1.5 }}
                 viewport={{ once: true }}
-                className="flex flex-col p-6 space-y-6 justify-center items-center rounded-2xl shadow sm:p-8 border-solid border border-sky-600 hover:shadow-sky-400 hover:bg-sky-600 duration-500 text-gray-100"
+                className="flex flex-col p-6 space-y-6 justify-center items-center rounded-2xl sm:p-8 border-solid border border-sky-600/70 hover:bg-sky-600/70 bg-sky-600/10 backdrop-blur-sm duration-500 text-gray-100"
               >
                 <div className="space-y-2">
                   <FontAwesomeIcon icon={faServer} size="8x" />
