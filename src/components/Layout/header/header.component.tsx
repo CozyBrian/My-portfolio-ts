@@ -1,5 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
+import { RESUME_URL } from "../../../constants";
 import useOnScreen from "../../../helpers";
 
 type Props = {
@@ -102,11 +103,7 @@ const Header = ({ pagerefs }: Props) => {
               {item.title}
             </a>
           ))}
-          <a
-            href="https://drive.google.com/file/d/1ii3nFmTpGCKaLiCkacCIkpgv90rHcX5g/view?usp=sharing"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
+          <a href={RESUME_URL} rel="noopener noreferrer" target="_blank">
             <div className="flex items-center font-['Nunito_Sans'] justify-center p-1 mx-2 duration-200 border border-sky-500 text-lg font-semibold rounded-sm w-24 hover:bg-sky-500 text-sky-500 hover:text-gray-900">
               Resume
             </div>
@@ -145,7 +142,7 @@ const Header = ({ pagerefs }: Props) => {
                 </motion.a>
               ))}
               <a
-                href="https://drive.google.com/file/d/1ii3nFmTpGCKaLiCkacCIkpgv90rHcX5g/view?usp=sharing"
+                href={RESUME_URL}
                 rel="noopener noreferrer"
                 target="_blank"
                 onClick={() => setOpen(!isOpen)}

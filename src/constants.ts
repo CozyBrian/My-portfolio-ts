@@ -85,3 +85,6 @@ export const BETechnologies = [
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
   },
 ];
+
+export const RESUME_URL =
+  "https://drive.google.com/file/d/1ii3nFmTpGCKaLiCkacCIkpgv90rHcX5g/view?usp=sharing";
