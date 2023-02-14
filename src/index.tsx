@@ -9,7 +9,7 @@ const root = ReactDOM.createRoot(
 );
 
 if (process.env.NODE_ENV !== "development") {
-  const sitenary = new Sitenary("63ebf9f3016df8a7928571db");
+  new Sitenary("63ebf9f3016df8a7928571db");
 }
 
 root.render(
