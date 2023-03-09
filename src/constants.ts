@@ -87,4 +87,4 @@ export const BETechnologies = [
 ];
 
 export const RESUME_URL =
-  "https://drive.google.com/file/d/1ii3nFmTpGCKaLiCkacCIkpgv90rHcX5g/view?usp=sharing";
+  "https://drive.google.com/file/d/1gUFJm9FCyRQMN8u0cwaAnHYuHP0lPyAJ/view?usp=sharing";
