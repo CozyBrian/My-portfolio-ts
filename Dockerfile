@@ -6,10 +6,10 @@ COPY . .
 
 ENV NODE_ENV production
 
-RUN npm i
+RUN yarn install
 
-RUN npm run build
+RUN yarn build
 
-RUN npm install -g serve
+RUN yarn global add serve
 
 CMD ["serve", "-s", "build", "-l", "3000"]
