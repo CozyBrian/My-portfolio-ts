@@ -27,7 +27,7 @@ const ContactView = () => {
         "service_c4fqdo8",
         "template_2rxlopw",
         { ...data },
-        process.env.REACT_APP_EMAILJS_KEY
+        import.meta.env.VITE_APP_EMAILJS_KEY
       )
       .then(
         (result) => {

@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect } from "react";
 
-export default function useOnScreen(ref) {
+export default function useOnScreen(ref: React.MutableRefObject<null>) {
   const [isIntersecting, setIntersecting] = useState(false);
 
   const observer = new IntersectionObserver(
@@ -10,7 +10,7 @@ export default function useOnScreen(ref) {
   );
 
   useEffect(() => {
-    observer.observe(ref.current);
+    observer.observe(ref.current!);
     // Remove the observer as soon as the component is unmounted
     return () => {
       observer.disconnect();
