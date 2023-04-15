@@ -57,11 +57,11 @@ const Header = ({ pagerefs }: Props) => {
         !isOpen ? "bg-[#000000a6]" : "bg-black"
       } flex w-full z-50 items-center justify-center fixed top-0`}
     >
-      <div className="container flex flex-row justify-between items-center h-full px-2 sm:px-24 text-gray-400">
+      <div className="container relative flex flex-row justify-between items-center h-full px-2 sm:px-24 text-gray-400">
         <h4 className="text-white opacity-100 text-xl font-['Nunito_Sans']">
           Brian Newton
         </h4>
-        <div className="sm:hidden">
+        <div className="md:hidden">
           <button
             onClick={() => setOpen(!isOpen)}
             type="button"
@@ -93,7 +93,7 @@ const Header = ({ pagerefs }: Props) => {
             )}
           </button>
         </div>
-        <div className="sm:flex flex-row justify-center items-center hidden overflow-hidden">
+        <div className="md:flex absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex-row justify-center items-center hidden overflow-hidden">
           {sections.map((item) => (
             <a
               key={item.title}
@@ -103,6 +103,8 @@ const Header = ({ pagerefs }: Props) => {
               {item.title}
             </a>
           ))}
+          </div>
+        <div className="md:flex flex-row justify-center items-center hidden overflow-hidden">
           <a href={RESUME_URL} rel="noopener noreferrer" target="_blank">
             <div className="flex items-center font-['Nunito_Sans'] justify-center p-1 mx-2 duration-200 border border-sky-500 text-lg font-semibold rounded-sm w-24 hover:bg-sky-500 text-sky-500 hover:text-gray-900">
               Resume
