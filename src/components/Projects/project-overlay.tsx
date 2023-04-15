@@ -4,13 +4,12 @@ import useMouseOverCallback from "../../hooks/useMouseOverCallback";
 import { useApiContext } from "../../services/api.context";
 import Img from "../utils/Img";
 import { Product } from "../../@types";
+import close from "../../assets/close.png";
 
 const ProjectOverlay = () => {
   const { isSelected: item, closeOverlay } = useApiContext();
   const CardRef = useRef(null);
   const [click, setClick] = useState(1);
-
-  const close = require("../../assets/close.png");
 
   useMouseOverCallback(CardRef, () => {
     setClick(click + 1);
@@ -24,6 +23,7 @@ const ProjectOverlay = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
+      transition={{ duration: 0.15 }}
       className="fixed w-screen h-screen flex justify-center items-center bg-black/30 z-40"
     >
       <motion.div
@@ -122,7 +122,7 @@ const ImageSection = ({ item }: { item: Product | null }) => {
         <div>
           <div
             onClick={() => handleMove("left")}
-            className="absolute flex items-center justify-center left-0 top-0 h-full w-1/5 opacity-20 hover:opacity-100 hover:bg-slate-800/50 duration-150"
+            className="absolute flex items-center justify-center left-0 top-0 h-full w-1/5 opacity-20 hover:opacity-100 hover:bg-slate-800/50 duration-150 z-10"
           >
             <div className="w-16 h-16">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -132,7 +132,7 @@ const ImageSection = ({ item }: { item: Product | null }) => {
           </div>
           <div
             onClick={() => handleMove("right")}
-            className="absolute flex items-center justify-center right-0 top-0 h-full w-1/5 opacity-20 hover:opacity-100 hover:bg-slate-800/50 duration-150"
+            className="absolute flex items-center justify-center right-0 top-0 h-full w-1/5 opacity-20 hover:opacity-100 hover:bg-slate-800/50 duration-150 z-10"
           >
             <div className="w-16 h-16">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">

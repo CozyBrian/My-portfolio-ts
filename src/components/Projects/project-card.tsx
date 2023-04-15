@@ -31,7 +31,7 @@ const ProjectCard = ({ item, onClick }: Props) => {
         initial={false}
         animate={{ y: isHover ? "0%" : "100%" }}
         transition={{ stiffness: 300, duration: 0.1 }}
-        className="absolute flex justify-center items-center flex-col w-full h-56 bg-sky-700/50"
+        className="absolute flex justify-center items-center flex-col w-full h-56 bg-sky-700/50 z-10"
       >
         <p className="text-xl my-2">{item.title}</p>
         <button

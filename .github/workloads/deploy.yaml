@@ -1,0 +1,24 @@
+name: Deploy To Droplet
+on:
+  push:
+    branches:
+      - main
+jobs:
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+    - name: executing scripts on droplet
+      uses: appleboy/ssh-action@v0.1.10
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.SSHKEY }}
+        passphrase: ${{ secrets.PASSPHRASE }}
+        script: |
+          # move to do deploys directory
+          cd DEPLOYMENTS/do-deploys
+          # pull recent changes
+          git pull
+          ./start.sh
