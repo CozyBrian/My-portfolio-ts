@@ -1,13 +1,15 @@
 import { AnimatePresence, motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
-import { RESUME_URL } from "../../../constants";
 import useOnScreen from "../../../helpers";
+import { useApiContext } from "../../../services/api.context";
 
 type Props = {
   pagerefs: React.MutableRefObject<null>[];
 };
 
 const Header = ({ pagerefs }: Props) => {
+  const { profile } = useApiContext();
+
   const [isOpen, setOpen] = useState(false);
 
   const isVisible = useOnScreen(pagerefs[0]);
@@ -103,9 +105,9 @@ const Header = ({ pagerefs }: Props) => {
               {item.title}
             </a>
           ))}
-          </div>
+        </div>
         <div className="md:flex flex-row justify-center items-center hidden overflow-hidden">
-          <a href={RESUME_URL} rel="noopener noreferrer" target="_blank">
+          <a href={profile.resume} rel="noopener noreferrer" target="_blank">
             <div className="flex items-center font-['Nunito_Sans'] justify-center p-1 mx-2 duration-200 border border-sky-500 text-lg font-semibold rounded-sm w-24 hover:bg-sky-500 text-sky-500 hover:text-gray-900">
               Resume
             </div>
@@ -144,7 +146,7 @@ const Header = ({ pagerefs }: Props) => {
                 </motion.a>
               ))}
               <a
-                href={RESUME_URL}
+                href={profile.resume}
                 rel="noopener noreferrer"
                 target="_blank"
                 onClick={() => setOpen(!isOpen)}

@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
 import WindowNav from "./window-nav";
+import { useApiContext } from "../../../services/api.context";
 
 const CodeWindow = () => {
   const [profileLoaded, setProfileLoaded] = useState(false);
-  const profile =
-    "https://firebasestorage.googleapis.com/v0/b/my-portfolio-35b84.appspot.com/o/Profile.jpg?alt=media&token=3c8c8853-722a-4d4c-9d59-f048b6f7e3ee";
+
+  const { profile } = useApiContext();
 
   const ChangeNameColor = (timeOut: number) => {
     const NameElement = document.getElementsByClassName("typewriter");
@@ -40,7 +41,6 @@ const CodeWindow = () => {
             onInit={(typewriter) => {
               typewriter
                 .changeDelay(75)
-                // .typeString("Hello, I'm ")
                 .typeString(`<span class="typewriter">Brian Newton</span>`)
                 .start()
                 .callFunction(() => {
@@ -83,7 +83,7 @@ const CodeWindow = () => {
           >
             <img
               onLoad={() => setProfileLoaded(true)}
-              src={profile}
+              src={profile.profileImage}
               alt=""
               className="object-cover h-72 sm:h-80 lg:h-96 lg:w-96 xl:h-112 2xl:h-128 rounded-full p-5 shrink-0"
             />

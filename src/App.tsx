@@ -40,8 +40,8 @@ function App() {
       <Particle />
       <div className="sm:h-screen snap-y scroll-smooth snap-mandatory overflow-y-scroll overflow-x-hidden overflow-x-clip scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-sky-400/80">
         <div className="m-0" id="home">
-          <Header pagerefs={pagerefs} />
           <ApiContextProvider db={database}>
+            <Header pagerefs={pagerefs} />
             <OverlayContainer />
             <section
               ref={homeref}

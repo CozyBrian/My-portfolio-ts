@@ -8,3 +8,8 @@ export type Product = {
   type: "web" | "mobile";
   tags?: string[];
 };
+
+export type Profile = {
+  profileImage: string;
+  resume: string;
+};
