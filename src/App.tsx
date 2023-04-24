@@ -11,6 +11,7 @@ import ApiContextProvider, { useApiContext } from "./services/api.context";
 import { AnimatePresence } from "framer-motion";
 import ProjectOverlay from "./components/Projects/project-overlay";
 import Particle from "./components/particles/particles";
+import WorkSection from "./components/work";
 
 const firebaseConfig = {
   apiKey: `${import.meta.env.VITE_APP_FIREBASE_KEY}`,
@@ -30,10 +31,11 @@ const database = getDatabase(app);
 function App() {
   const homeref = useRef(null);
   const skillref = useRef(null);
+  const workref = useRef(null);
   const projectref = useRef(null);
   const contactref = useRef(null);
 
-  const pagerefs = [homeref, skillref, projectref, contactref];
+  const pagerefs = [homeref, skillref, workref, projectref, contactref];
 
   return (
     <>
@@ -56,6 +58,13 @@ function App() {
               className="min-h-screen flex flex-col justify-center md:snap-center"
             >
               <SkillView />
+            </section>
+            <section
+              id="work"
+              ref={workref}
+              className="min-h-screen flex flex-col justify-center md:snap-center"
+            >
+              <WorkSection />
             </section>
             <section
               id="projects"

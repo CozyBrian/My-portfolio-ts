@@ -16,6 +16,7 @@ const Header = ({ pagerefs }: Props) => {
   const isVisible1 = useOnScreen(pagerefs[1]);
   const isVisible2 = useOnScreen(pagerefs[2]);
   const isVisible3 = useOnScreen(pagerefs[3]);
+  const isVisible4 = useOnScreen(pagerefs[4]);
 
   const navlink = document.getElementsByClassName("hLink");
 
@@ -32,7 +33,18 @@ const Header = ({ pagerefs }: Props) => {
     isVisible3
       ? navlink[3].classList.add("text-sky-500")
       : navlink[3].classList.remove("text-sky-500");
+    isVisible4
+      ? navlink[4].classList.add("text-sky-500")
+      : navlink[4].classList.remove("text-sky-500");
   });
+
+  const isVisibleArray = [
+    isVisible,
+    isVisible1,
+    isVisible2,
+    isVisible3,
+    isVisible4,
+  ];
 
   const sections = [
     {
@@ -40,8 +52,12 @@ const Header = ({ pagerefs }: Props) => {
       href: "#home",
     },
     {
-      title: "My Skills",
+      title: "Skills",
       href: "#skills",
+    },
+    {
+      title: "Work",
+      href: "#work",
     },
     {
       title: "Projects",
@@ -57,7 +73,7 @@ const Header = ({ pagerefs }: Props) => {
     <div
       className={`h-14 ${
         !isOpen ? "bg-[#000000a6]" : "bg-black"
-      } flex w-full z-50 items-center justify-center fixed top-0`}
+      } flex w-full z-50 items-center justify-center fixed top-0 font-['Nunito_Sans']`}
     >
       <div className="container relative flex flex-row justify-between items-center h-full px-2 sm:px-24 text-gray-400">
         <h4 className="text-white opacity-100 text-xl font-['Nunito_Sans']">
@@ -95,15 +111,23 @@ const Header = ({ pagerefs }: Props) => {
             )}
           </button>
         </div>
-        <div className="md:flex absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex-row justify-center items-center hidden overflow-hidden">
-          {sections.map((item) => (
-            <a
-              key={item.title}
-              href={item.href}
-              className="px-2 hover:text-gray-200 transition-all duration-100 hLink"
-            >
-              {item.title}
-            </a>
+        <div className="md:flex absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex-row justify-center items-center hidden">
+          {sections.map((item, i) => (
+            <motion.div className="relative overflow-visible">
+              <a
+                key={item.title}
+                href={item.href}
+                className="px-2 hover:text-gray-200 transition-all duration-100 hLink"
+              >
+                {item.title}
+              </a>
+              {isVisibleArray[i] && (
+                <motion.span
+                  layoutId="nav-link-bar"
+                  className="absolute left-0 -bottom-4 w-full h-0.5 bg-sky-500 z-50"
+                ></motion.span>
+              )}
+            </motion.div>
           ))}
         </div>
         <div className="md:flex flex-row justify-center items-center hidden overflow-hidden">
