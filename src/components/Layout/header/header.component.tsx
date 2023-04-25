@@ -11,40 +11,21 @@ const Header = ({ pagerefs }: Props) => {
   const { profile } = useApiContext();
 
   const [isOpen, setOpen] = useState(false);
+  const [activePage, setActivePage] = useState("Home");
 
-  const isVisible = useOnScreen(pagerefs[0]);
-  const isVisible1 = useOnScreen(pagerefs[1]);
-  const isVisible2 = useOnScreen(pagerefs[2]);
-  const isVisible3 = useOnScreen(pagerefs[3]);
-  const isVisible4 = useOnScreen(pagerefs[4]);
-
-  const navlink = document.getElementsByClassName("hLink");
+  const homeVisible = useOnScreen(pagerefs[0]);
+  const skillVisible = useOnScreen(pagerefs[1]);
+  const workVisible = useOnScreen(pagerefs[2]);
+  const projectsVisible = useOnScreen(pagerefs[3]);
+  const contactVisible = useOnScreen(pagerefs[4]);
 
   useEffect(() => {
-    isVisible
-      ? navlink[0].classList.add("text-sky-500")
-      : navlink[0].classList.remove("text-sky-500");
-    isVisible1
-      ? navlink[1].classList.add("text-sky-500")
-      : navlink[1].classList.remove("text-sky-500");
-    isVisible2
-      ? navlink[2].classList.add("text-sky-500")
-      : navlink[2].classList.remove("text-sky-500");
-    isVisible3
-      ? navlink[3].classList.add("text-sky-500")
-      : navlink[3].classList.remove("text-sky-500");
-    isVisible4
-      ? navlink[4].classList.add("text-sky-500")
-      : navlink[4].classList.remove("text-sky-500");
-  });
-
-  const isVisibleArray = [
-    isVisible,
-    isVisible1,
-    isVisible2,
-    isVisible3,
-    isVisible4,
-  ];
+    homeVisible && setActivePage("Home");
+    skillVisible && setActivePage("Skills");
+    workVisible && setActivePage("Work");
+    projectsVisible && setActivePage("Projects");
+    contactVisible && setActivePage("Contact");
+  }, [contactVisible, homeVisible, projectsVisible, skillVisible, workVisible]);
 
   const sections = [
     {
@@ -68,6 +49,8 @@ const Header = ({ pagerefs }: Props) => {
       href: "#contact",
     },
   ];
+
+  console.log("rerendering");
 
   return (
     <div
@@ -117,13 +100,15 @@ const Header = ({ pagerefs }: Props) => {
               <a
                 key={item.title}
                 href={item.href}
-                className="px-2 hover:text-gray-200 transition-all duration-100 hLink"
+                className={`px-2 hover:text-gray-200 transition-all duration-100 ${
+                  item.title === activePage ? "text-sky-500" : "text-gray-400"
+                }`}
               >
                 {item.title}
               </a>
-              {isVisibleArray[i] && (
+              {item.title === activePage && (
                 <motion.span
-                  layoutId="nav-link-bar"
+                  layoutId="navbar"
                   className="absolute left-0 -bottom-4 w-full h-0.5 bg-sky-500 z-50"
                 ></motion.span>
               )}
