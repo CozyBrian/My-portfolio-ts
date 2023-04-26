@@ -18,6 +18,7 @@
     "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^27.5.2",
     "@types/node": "^16.11.39",
+    "classnames": "^2.3.2",
     "firebase": "^9.8.3",
     "framer-motion": "^7.2.1",
     "preline": "^1.1.2",
