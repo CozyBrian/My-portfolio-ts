@@ -22,7 +22,7 @@ const CodeWindow = () => {
   return (
     <section className="rounded-xl min-h-[60vh] border-solid border border-sky-400 shadow-sky-400  backdrop-blur-sm text-gray-100 p-2 md:p-3">
       <WindowNav />
-      <div className="container flex flex-col justify-center p-1 sm:p-6 mx-auto sm:py-10 lg:py-20 xl:py-32 lg:flex-row lg:justify-between">
+      <div className="container xl:w-[1480px] flex flex-col justify-center p-1 sm:p-6 mx-auto sm:py-10 lg:py-20 xl:py-32 lg:flex-row lg:justify-between">
         <div className="flex flex-col justify-center p-6 items-center lg:items-start text-center rounded-sm lg:max-w-md xl:max-w-4xl lg:text-left">
           <motion.span
             initial={{ opacity: 0, y: 10 }}
