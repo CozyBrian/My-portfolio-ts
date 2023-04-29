@@ -1,14 +1,15 @@
 import React, { useState, useEffect, createContext, useContext } from "react";
 import { ref, child, get, Database } from "firebase/database";
-import { Product, Profile } from "../@types";
+import { Project, Profile, Work } from "../@types";
 
 type ApiContextType = {
-  projects: Product[];
+  projects: Project[];
+  works: Work[];
   profile: Profile;
   isLoaded: boolean;
-  isSelected: Product | null;
+  isSelected: Project | null;
   overlayIsOpen: boolean;
-  setItem: (item: Product) => void;
+  setItem: (item: Project) => void;
   closeOverlay: () => void;
 };
 
@@ -19,6 +20,7 @@ type Props = {
 
 const initialState: ApiContextType = {
   projects: [],
+  works: [],
   profile: {
     profileImage: "",
     resume: "",
@@ -35,11 +37,12 @@ export const ApiContext = createContext<ApiContextType>(initialState);
 const ApiContextProvider = ({ children, db }: Props) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [overlayIsOpen, setOverlayIsOpen] = useState(false);
-  const [projects, setProjects] = useState<Product[]>([]);
+  const [projects, setProjects] = useState<Project[]>([]);
+  const [works, setWorks] = useState<Work[]>([]);
   const [profile, setProfile] = useState<Profile>(initialState.profile);
-  const [isSelected, setIsSelected] = useState<Product | null>(null);
+  const [isSelected, setIsSelected] = useState<Project | null>(null);
 
-  const setItem = (item: Product) => {
+  const setItem = (item: Project) => {
     setIsSelected(item);
     setOverlayIsOpen(true);
   };
@@ -61,25 +64,59 @@ const ApiContextProvider = ({ children, db }: Props) => {
     }
   };
 
-  const onLoad = async () => {
-    const profile = await getProfile()!;
-    setProfile(profile!);
+  const getWorks = async (): Promise<Work[] | undefined> => {
+    try {
+      const snapshot = await get(child(dbRef, "Work"));
 
-    get(child(dbRef, `Projects/`))
-      .then((snapshot) => {
-        if (snapshot.exists()) {
-          let tempProjects: Product[] = [];
-          Object.entries(snapshot.val()).forEach(([key, value], index) => {
-            tempProjects.push(value as Product);
-          });
-          setProjects(tempProjects);
-          setIsLoaded(true);
-        }
-      })
-      .catch((e) => {
-        setIsLoaded(false);
-        console.error(e);
-      });
+      if (snapshot.exists()) {
+        return snapshot.val();
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  };
+  const getProjects = async (): Promise<Project[] | undefined> => {
+    try {
+      const snapshot = await get(child(dbRef, "Projects"));
+
+      if (snapshot.exists()) {
+        return snapshot.val();
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  const onLoad = async () => {
+    try {
+      const profile = await getProfile()!;
+      setProfile(profile!);
+
+      const works = await getWorks();
+
+      const projects = await getProjects();
+
+      if (projects) {
+        let temp: Project[] = [];
+        Object.entries(projects).forEach(([key, value], index) => {
+          temp.push(value as Project);
+        });
+        setProjects(temp);
+      }
+
+      if (works) {
+        let temp: Work[] = [];
+        Object.entries(works).forEach(([key, value], index) => {
+          temp.push(value as Work);
+        });
+        setWorks(temp);
+      }
+
+      setIsLoaded(true);
+    } catch (error) {
+      setIsLoaded(false);
+      console.error(error);
+    }
   };
 
   useEffect(() => {
@@ -96,6 +133,7 @@ const ApiContextProvider = ({ children, db }: Props) => {
     <ApiContext.Provider
       value={{
         projects,
+        works,
         profile,
         isLoaded,
         isSelected,

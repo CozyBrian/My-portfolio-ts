@@ -1,4 +1,4 @@
-export type Product = {
+export type Project = {
   id: string;
   image: string[];
   title: string;
@@ -12,4 +12,14 @@ export type Product = {
 export type Profile = {
   profileImage: string;
   resume: string;
+};
+
+export type Work = {
+  id: string;
+  company: string;
+  position: string;
+  startDate: string;
+  endDate: string;
+  image: string;
+  description: string[];
 };

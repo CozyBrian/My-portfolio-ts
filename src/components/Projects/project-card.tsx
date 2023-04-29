@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import useDeviceDetect from "../../hooks/useMobileDetect";
-import { Product } from "../../@types";
+import { Project } from "../../@types";
 import Img from "../utils/Img";
 
 type Props = {
-  item: Product;
-  onClick: (item: Product) => void;
+  item: Project;
+  onClick: (item: Project) => void;
 };
 
 const ProjectCard = ({ item, onClick }: Props) => {

@@ -50,8 +50,6 @@ const Header = ({ pagerefs }: Props) => {
     },
   ];
 
-  console.log("rerendering");
-
   return (
     <div
       className={`h-14 ${
@@ -96,9 +94,8 @@ const Header = ({ pagerefs }: Props) => {
         </div>
         <div className="md:flex absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex-row justify-center items-center hidden">
           {sections.map((item, i) => (
-            <motion.div className="relative overflow-visible">
+            <motion.div key={item.title} className="relative overflow-visible">
               <a
-                key={item.title}
                 href={item.href}
                 className={`px-2 hover:text-gray-200 transition-all duration-100 ${
                   item.title === activePage ? "text-sky-500" : "text-gray-400"

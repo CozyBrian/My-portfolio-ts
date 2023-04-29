@@ -3,7 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import useMouseOverCallback from "../../hooks/useMouseOverCallback";
 import { useApiContext } from "../../services/api.context";
 import Img from "../utils/Img";
-import { Product } from "../../@types";
+import { Project } from "../../@types";
 import close from "../../assets/close.png";
 
 const ProjectOverlay = () => {
@@ -81,7 +81,7 @@ const ProjectOverlay = () => {
   );
 };
 
-const ImageSection = ({ item }: { item: Product | null }) => {
+const ImageSection = ({ item }: { item: Project | null }) => {
   const [fullImage, setFullImage] = useState(false);
   const [activeImage, setActiveImage] = useState(0);
 
