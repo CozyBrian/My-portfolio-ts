@@ -2,12 +2,14 @@ FROM node:18-alpine
 
 WORKDIR /app
 
-COPY . .
+COPY package*.json ./
 
 RUN yarn install
 
-RUN yarn build
-
 RUN yarn global add serve
+
+COPY . .
+
+RUN yarn build
 
 CMD ["serve", "-s", "dist", "-l", "3000"]
