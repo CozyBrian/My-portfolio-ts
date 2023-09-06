@@ -16,15 +16,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html
-      lang="en"
-      className={`bg-cozy-background ${FONTS.nunitoSans.variable}`}
-    >
-      <body className={inter.className}>
+    <html lang="en" className={`bg-tesla-900 ${FONTS.nunitoSans.variable}`}>
+      <body suppressHydrationWarning={true} className={inter.className}>
         <Header />
-        <main className="flex flex-col items-center  bg-cozy-background">
-          {children}
-        </main>
+        <main className="flex flex-col items-center">{children}</main>
       </body>
     </html>
   );
