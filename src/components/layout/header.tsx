@@ -24,7 +24,7 @@ const Header = () => {
       animate={{ height: scrollY.get() > scrollThreshold ? 60 : 120 }}
       transition={{ duration: 0.1 }}
       className={classNames(
-        "fixed top-0 left-0 flex items-center justify-center h-[120px]",
+        "fixed top-0 left-0 flex items-center justify-center h-[120px] z-50",
         "backdrop-blur-md bg-opacity-20 bg-tesla-900 w-full border-b duration-100",
         isScrolled ? "border-tesla-800" : "border-transparent",
       )}
