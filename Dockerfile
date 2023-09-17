@@ -8,7 +8,7 @@ RUN bun install
 
 COPY . .
 
-RUN bun run build
+RUN bunx --bun vite build
 
 RUN bun add --global serve
 
