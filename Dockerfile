@@ -12,4 +12,4 @@ COPY . .
 
 RUN bun add --global serve
 
-CMD ["serve", "-s", "dist", "-l", "3000"]
+CMD ["bunx", "serve", "-s", "dist", "-l", "3000"]
