@@ -2,3 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
+
+.project-bento {
+   display: grid; 
+
+   grid-template-rows: 1fr 1fr;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+   
+   
+}
+  
+.bento-image {
+  grid-row-start: 1;
+  grid-column-start: 1;
+
+  grid-row-end: 3;
+  grid-column-end: 3;
+}
+.bento-main {
+  grid-row-start: 1;
+  grid-column-start: 3;
+
+  grid-row-end: 2;
+  grid-column-end: 5;   
+}
+.bento-sub {
+  grid-row-start: 2;
+  grid-column-start: 3;
+
+  grid-row-end: 3;
+  grid-column-end: 5;
+}
+/* <div class="angry-grid">
+  <div id="item-0">&nbsp;</div>
+  <div id="item-1">&nbsp;</div>
+  <div id="item-2">&nbsp;</div>
+</div> */
+
