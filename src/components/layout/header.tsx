@@ -25,16 +25,26 @@ const Header = () => {
       transition={{ duration: 0.1 }}
       className={classNames(
         "fixed top-0 left-0 flex items-center justify-center h-[120px] z-50",
-        "backdrop-blur-md bg-opacity-20 bg-tesla-900 w-full border-b duration-100",
+        "bg-opacity-20 bg-tesla-900 w-full border-b duration-100",
         isScrolled ? "border-tesla-800" : "border-transparent",
       )}
     >
-      <div className="w-[880px] h-full flex flex-row items-center justify-between">
+      <div className="w-[880px] h-full flex flex-row items-center justify-between z-50">
         <div className="w-fit h-11">
           <Image src={CozyMinecraft} className="h-full w-[72px]" alt="Logo" />
         </div>
         <div className="w-11 h-11 bg- slate-600"></div>
       </div>
+      <div
+        style={{
+          maskImage: `linear-gradient(to bottom, white 0%, white 100%)`,
+          WebkitMaskImage: `linear-gradient(to bottom, white 0%, white 100%)`,
+          maskClip: `content-box`,
+          WebkitMaskClip: `content-box`,
+          backdropFilter: `blur(12px)`,
+        }}
+        className="absolute inset-[-18px] p-[18px]"
+      ></div>
     </motion.header>
   );
 };
