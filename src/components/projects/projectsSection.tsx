@@ -75,7 +75,7 @@ export default function ProjectsSection() {
           </div>
           <div className="flex bento-sub">
             <div className="flex-1 flex flex-col justify-between bg-tesla-700/70 m-2 rounded-3xl p-8">
-              <div className="flex flex-row gap-2 gap-y-3 flex-wrap items-center">
+              <div className="flex flex-row gap-2 gap-y-3 flex-wrap items-center text-sm">
                 <div className="bg-tesla-600 py-1 px-3 text-tesla-text rounded-full">
                   React
                 </div>

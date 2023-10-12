@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import cn from "classnames";
+import { ArrowRight } from "iconsax-react";
 
 const WorkSection = () => {
   const [selectedTab, setSelectedTab] = useState("a");
@@ -10,6 +11,7 @@ const WorkSection = () => {
     {
       id: "a",
       title: "Slightly Techie",
+      url: "https://slightlytechie.com/",
       position: "Full Stack Developer",
       startDate: "Dec 2022",
       endDate: "Present",
@@ -18,10 +20,12 @@ const WorkSection = () => {
         "Developed a Discord bot to streamline team communication by automating certain repetitive tasks. This has reduced time spent on issue resolution by over 50%. Technologies used were TypeScript, ExpressJS and MongoDB",
         "Adapted swiftly to emerging technologies and implemented them effectively in projects while sharing the knowledge with other teammates. This has saved the team the cost of finding over 5 developers in different areas of expertise and has fostered a culture of continuous learning.",
       ],
+      stack: ["Typescript", "NextJS", "Tailwind", "ExpressJS", "MongoDB"],
     },
     {
       id: "b",
       title: "Ceruba",
+      url: "https://www.ceruba.com/",
       position: "Frontend Developer",
       startDate: "March 2023",
       endDate: "Present",
@@ -30,6 +34,7 @@ const WorkSection = () => {
         "Troubleshooting and debugging code issues to ensure smooth functioning of the platform.",
         "collaborating with teams across departments to align front-end development with back-end and design efforts, ensuring seamless product integration.",
       ],
+      stack: ["Typescript", "NextJS", "Tailwind"],
     },
     {
       id: "c",
@@ -43,6 +48,7 @@ const WorkSection = () => {
         "Implemented SEO best practices to improve the website's search engine ranking and visibility by 14%.",
         "Enhanced user engagement by optimizing page load times and improving overall website performance by as much as 20%, resulting in longer user stay durations.",
       ],
+      stack: ["Typescript", "NextJS", "Tailwind"],
     },
   ];
   return (
@@ -51,7 +57,7 @@ const WorkSection = () => {
       // whileInView={{ opacity: 1, y: 0 }}
       // viewport={{ once: true }}
       transition={{ duration: 1.5 }}
-      className="bg-tesla-800 h-[600px] mb-24 w-full flex flex-row justify-center items-center"
+      className="bg-tesla-800 h-[700px] mb-32 w-full flex flex-row justify-center items-center"
     >
       <section className="w-[880px] h-full py-14 flex flex-col gap-16">
         <h2 className="text-tesla-text text-3xl font-medium tracking-wide">
@@ -119,7 +125,14 @@ const WorkSection = () => {
                       <div>
                         <p className="text-[#d6e1ee] text-xl mb-1">
                           {item.position}{" "}
-                          <span className="text-[#5989bd]">@ {item.title}</span>
+                          <a
+                            href={item.url}
+                            target="_blank"
+                            className="text-[#5989bd] hover:text-tesla-300 duration-200 font-medium"
+                            rel="noreferrer"
+                          >
+                            @ {item.title}
+                          </a>
                         </p>
                         <p className="text-xs text-tesla-400 font-mono">
                           {item.startDate} - {item.endDate}
@@ -135,11 +148,28 @@ const WorkSection = () => {
                           </li>
                         ))}
                       </ul>
+                      <div className="flex flex-row gap-2 gap-y-3 flex-wrap items-center text-xs">
+                        {item.stack.map((stack) => (
+                          <div
+                            key={stack}
+                            className="bg-tesla-700/70 py-1 px-3 text-tesla-300 rounded-full"
+                          >
+                            {stack}
+                          </div>
+                        ))}
+                      </div>
                     </motion.div>
                   ),
               )}
             </AnimatePresence>
           </div>
+        </div>
+
+        <div className="flex flex-1 items-end">
+          <button className="flex flex-row items-center gap-2 bg-tesla-700/70 h-11 outline outline-1 outline-transparent hover:outline-[#6e97c5] active:outline-[#c1d3e6] hover:shadow-tesla-sm hover:-translate-y-0.5 active:translate-y-0.5 shadow-tesla-800 text-tesla-300 active:text-[#c1d3e6] font-medium px-4 py-2 rounded-lg duration-200">
+            <p>View Full Résumé</p>
+            <ArrowRight />
+          </button>
         </div>
       </section>
     </motion.div>
