@@ -20,13 +20,7 @@ export default function Home() {
         </div>
       </div>
       <WorkSection />
-      {/* <div className="bg-tesla-800 h-[680px] mb-24 w-full flex flex-row justify-center items-center">
-        <div className="w-[880px] h-full py-14 flex flex-row flex-wrap gap-6 ">
-          <h2 className="px-1 text-tesla-text text-3xl font-medium tracking-wide">
-            EXPERIENCE
-          </h2>
-        </div>
-      </div> */}
+
       <ProjectsSection />
     </>
   );
