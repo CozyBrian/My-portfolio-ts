@@ -152,7 +152,7 @@ const WorkSection = () => {
                         {item.stack.map((stack) => (
                           <div
                             key={stack}
-                            className="bg-tesla-700/70 py-1 px-3 text-tesla-300 rounded-full"
+                            className="bg-tesla-700/70 py-1 px-3 text-tesla-300 outline outline-1 outline-transparent hover:outline-tesla-300 hover:text-tesla-200 hover:bg-tesla-600/70 rounded-full duration-100"
                           >
                             {stack}
                           </div>
