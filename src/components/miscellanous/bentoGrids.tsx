@@ -3,7 +3,7 @@ import React from "react";
 const BentoGrids = () => {
   return (
     <div className="bg-tesla-800 w-full flex flex-row justify-center items-center">
-      <div className="w-[880px] h-full py-24 flex flex-row flex-wrap gap-6">
+      <div className="w-full md:w-[880px] h-full py-24 flex flex-row flex-wrap gap-6">
         <div className="grid auto-rows-[192px] w-full grid-cols-3 gap-4">
           {[...Array(10)].map((_, i) => (
             <div

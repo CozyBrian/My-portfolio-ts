@@ -33,9 +33,32 @@
   grid-row-end: 3;
   grid-column-end: 5;
 }
-/* <div class="angry-grid">
-  <div id="item-0">&nbsp;</div>
-  <div id="item-1">&nbsp;</div>
-  <div id="item-2">&nbsp;</div>
-</div> */
+
+
+.x-contact-me:before {
+  --size: 150px;
+  --icon:  url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjxzdmcgd2lkdGg9IjMwMCIgaGVpZ2h0PSIzMDAuMjUxIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+DQogPHBhdGggZD0iTTE3OC41NyAxMjcuMTUgMjkwLjI3IDBoLTI2LjQ2bC05Ny4wMyAxMTAuMzhMODkuMzQgMEgwbDExNy4xMyAxNjYuOTNMMCAzMDAuMjVoMjYuNDZsMTAyLjQtMTE2LjU5IDgxLjggMTE2LjU5aDg5LjM0TTM2LjAxIDE5LjU0SDc2LjY2bDE4Ny4xMyAyNjIuMTNoLTQwLjY2Ii8+DQo8L3N2Zz4=);
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+  -webkit-mask-image: var(--icon);
+  mask-size: 16px;
+  -webkit-mask-size: 16px;
+  mask-image: var(--icon);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  background-color: currentColor;
+  margin-right: 0.18em;
+  transform: translateY(-2px);
+  text-rendering: optimizeLegibility;
+  font-size: inherit;
+  line-height: inherit;
+  box-sizing: border-box;
+  word-break: break-word;
+
+  /* scale: 0.1; */
+}
+
 

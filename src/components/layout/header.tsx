@@ -29,7 +29,7 @@ const Header = () => {
         isScrolled ? "border-tesla-800" : "border-transparent",
       )}
     >
-      <div className="w-[880px] h-full flex flex-row items-center justify-between z-50">
+      <div className="w-full md:w-[880px] h-full flex flex-row items-center justify-between z-50">
         <div className="w-fit h-11">
           <Image src={CozyMinecraft} className="h-full w-[72px]" alt="Logo" />
         </div>

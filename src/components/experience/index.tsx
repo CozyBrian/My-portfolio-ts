@@ -52,14 +52,14 @@ const WorkSection = () => {
     },
   ];
   return (
-    <motion.div
+    <motion.section
       // initial={{ opacity: 0, y: 50 }}
       // whileInView={{ opacity: 1, y: 0 }}
       // viewport={{ once: true }}
       transition={{ duration: 1.5 }}
-      className="bg-tesla-800 h-[700px] mb-32 w-full flex flex-row justify-center items-center"
+      className="bg-tesla-800 min-h-[700px] mb-32 w-full flex flex-row justify-center items-center"
     >
-      <section className="w-[880px] h-full py-14 flex flex-col gap-16">
+      <div className="w-full md:w-[880px] min-h-[700px] py-14 flex flex-col gap-16">
         <h2 className="text-tesla-text text-3xl font-medium tracking-wide">
           EXPERIENCE
         </h2>
@@ -171,8 +171,8 @@ const WorkSection = () => {
             <ArrowRight />
           </button>
         </div>
-      </section>
-    </motion.div>
+      </div>
+    </motion.section>
   );
 };
 

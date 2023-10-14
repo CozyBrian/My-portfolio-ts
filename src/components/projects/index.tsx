@@ -10,8 +10,8 @@ export default function ProjectsSection() {
   const [isFull, setIsFull] = useState(false);
 
   return (
-    <div className="bg-tesla-800 h-[680px] w-full flex flex-row justify-center items-center">
-      <div className="w-[880px] flex flex-col gap-10">
+    <section className="bg-tesla-800 h-[680px] mb-32 w-full flex flex-row justify-center items-center">
+      <div className="w-full md:w-[880px] flex flex-col gap-10">
         <h2 className="px-1 text-tesla-text text-3xl font-medium tracking-wide">
           PROJECTS
         </h2>
@@ -113,6 +113,6 @@ export default function ProjectsSection() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
