@@ -57,8 +57,16 @@
   line-height: inherit;
   box-sizing: border-box;
   word-break: break-word;
-
-  /* scale: 0.1; */
 }
 
-
+.fade-x {
+  mask-image: linear-gradient(
+  to left,
+  transparent 0 0.5%,
+  #11253A   3% 97%,
+  transparent 99.5% 100%
+  );
+}
+  /* transparent,
+  85%,
+  #11253A */

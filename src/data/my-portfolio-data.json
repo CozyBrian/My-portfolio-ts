@@ -1,0 +1,157 @@
+{
+  "Profile": {
+    "profileImage": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-35b84.appspot.com/o/profile%2Fprofile.jpg?alt=media&token=8f554611-efa3-432f-83f7-d6a62fcf95bd",
+    "resume": "https://drive.google.com/file/d/13ooyV8ho369kFIZr0LSGOiLssp_ltqjm/view?usp=sharing"
+  },
+  "Projects": {
+    "5I7Z8hM9M7JhMKuv": {
+      "disc": "Sitenary is a website analytics service that provides users with comprehensive information on various aspects of their website. Such as the number of views and where users visit their site.",
+      "id": "5I7Z8hM9M7JhMKuv",
+      "image": [
+        "https://firebasestorage.googleapis.com/v0/b/my-portfolio-35b84.appspot.com/o/projects-screenshots%2FScreenshot%202023-03-09%20at%2012.17.18%20AM.png?alt=media&token=dbdd833c-0103-46f7-be84-bd2cc029873a",
+        "https://firebasestorage.googleapis.com/v0/b/my-portfolio-35b84.appspot.com/o/projects-screenshots%2FScreenshot%202023-03-09%20at%2012.18.09%20AM.png?alt=media&token=3bcef90f-e07f-4f93-a137-9514b7fbf602"
+      ],
+      "link": "https://github.com/CozyBrian/Sitenary",
+      "live": "https://sitenary-web-huuh3.ondigitalocean.app",
+      "tags": [
+        "React",
+        "ExpressJs",
+        "NodeJs",
+        "MongoDB",
+        "NPM"
+      ],
+      "title": "Sitenary",
+      "type": "web"
+    },
+    "AvCiVIumEihG_FME": {
+      "disc": "This is an anonymous peer to peer audio chat web app. using React for the front end and NodeJs for the backend",
+      "id": "AvCiVIumEihG_FME",
+      "image": [
+        "https://firebasestorage.googleapis.com/v0/b/my-portfolio-35b84.appspot.com/o/projects-screenshots%2FEtoChat-ScreenShot.png?alt=media&token=1a3d9c60-dde9-4a88-aab5-a3adba890bf4",
+        "https://firebasestorage.googleapis.com/v0/b/my-portfolio-35b84.appspot.com/o/projects-screenshots%2FEtoChat-ScreenShot-2.png?alt=media&token=2b2929f6-c8ca-48be-9699-d1a7f2ffe23c",
+        "https://firebasestorage.googleapis.com/v0/b/my-portfolio-35b84.appspot.com/o/projects-screenshots%2FEtoChat-ScreenShot-3.png?alt=media&token=3416a556-144a-4242-9ece-6bf425c00aa0"
+      ],
+      "link": "https://github.com/CozyBrian/Etochat-Web",
+      "live": "https://etochat-web.onrender.com/",
+      "tags": [
+        "React",
+        "NodeJs",
+        "TailwindCSS"
+      ],
+      "title": "EtoChat",
+      "type": "web"
+    },
+    "GHgyCpgDK4ZiCnkS": {
+      "disc": "MealsToGo is a restaurant and food look-up app. You can find restaurants and check their menu and opening hours.",
+      "id": "GHgyCpgDK4ZiCnkS",
+      "image": [
+        "https://firebasestorage.googleapis.com/v0/b/my-portfolio-35b84.appspot.com/o/projects-screenshots%2Fmealstogo1.jpg?alt=media&token=6510e639-0f43-4387-8913-139ae4f2425d"
+      ],
+      "link": "https://github.com/CozyBrian/MealsToGo",
+      "live": "",
+      "tags": [
+        "React Native"
+      ],
+      "title": "MealsToGo",
+      "type": "mobile"
+    },
+    "Jh-fbLtvT4q1UiD0": {
+      "disc": "Welcome to SpotiStats, the web app that allows you to see your Spotify statistics, like top songs and top artists.",
+      "id": "Jh-fbLtvT4q1UiD0",
+      "image": [
+        "https://firebasestorage.googleapis.com/v0/b/my-portfolio-35b84.appspot.com/o/projects-screenshots%2FSpotiStats.png?alt=media&token=d30c7bfe-b22e-4a88-b72b-088b81a86ef4",
+        "https://firebasestorage.googleapis.com/v0/b/my-portfolio-35b84.appspot.com/o/projects-screenshots%2FSpotistats2.png?alt=media&token=3f6279e9-347f-45a5-977f-5faccf75872a",
+        "https://firebasestorage.googleapis.com/v0/b/my-portfolio-35b84.appspot.com/o/projects-screenshots%2FSimulator%20Screen%20Shot%20-%20iPhone%2014%20Pro%20-%202023-01-02%20at%2001.43.52.png?alt=media&token=7990817e-e4e5-47f2-be3c-7d8f3d5181a7"
+      ],
+      "link": "https://github.com/CozyBrian/SpotiStats",
+      "live": "https://spotistats-web.netlify.app",
+      "tags": [
+        "React",
+        "NodeJs",
+        "TailwindCSS",
+        "API"
+      ],
+      "title": "SpotiStats",
+      "type": "web"
+    },
+    "OHEz7kG5f3Tu-BZR": {
+      "disc": "QuakerMan is a bot that allows you to schedule tweets in advance and have them be sent at the time you specify.",
+      "id": "OHEz7kG5f3Tu-BZR",
+      "image": [
+        "https://firebasestorage.googleapis.com/v0/b/my-portfolio-35b84.appspot.com/o/projects-screenshots%2FQuakerman.png?alt=media&token=3720ec99-9d58-41b2-9a1e-20499ee460bf"
+      ],
+      "link": "https://github.com/CozyBrian/QuakerMan",
+      "live": "",
+      "tags": [
+        "NodeJs",
+        "ExpressJS",
+        "Firebase",
+        "Twitter-Api"
+      ],
+      "title": "QuakerMan",
+      "type": "web"
+    },
+    "WEiNiRE_YohrM23h": {
+      "disc": "This app is socialization app built with flutter. Mainly if you want to meet new people, Users are fed with a random selection of 4 users at a time.",
+      "id": "WEiNiRE_YohrM23h",
+      "image": [
+        "https://firebasestorage.googleapis.com/v0/b/my-portfolio-35b84.appspot.com/o/projects-screenshots%2F1.png?alt=media&token=e9dd3689-b621-4e5f-8222-5c7f943b8647"
+      ],
+      "link": "https://github.com/CozyBrian/hangout",
+      "live": "",
+      "tags": [
+        "Flutter",
+        "NodeJs",
+        "PostgreSQL"
+      ],
+      "title": "Hangout",
+      "type": "mobile"
+    },
+    "xXoQ1YVdBpoo3_pF": {
+      "disc": "This is a simple back to basics todo-list app that is focused on user experiences, demonstrating beautiful animations and transitions. You can try it out with email: demo@etonote.com and password: demo1234",
+      "id": "xXoQ1YVdBpoo3_pF",
+      "image": [
+        "https://firebasestorage.googleapis.com/v0/b/my-portfolio-35b84.appspot.com/o/projects-screenshots%2FScreenshot%20(47).png?alt=media&token=832f7189-bb3a-4669-b10c-7bd8c1cfca6b",
+        "https://firebasestorage.googleapis.com/v0/b/my-portfolio-35b84.appspot.com/o/projects-screenshots%2FScreenshot%202022-12-05%20at%208.14.37%20PM.png?alt=media&token=3eb9e372-126c-407c-ac34-09b3ccd361e3"
+      ],
+      "link": "https://github.com/CozyBrian/Etonote",
+      "live": "https://etonotes.netlify.app/",
+      "tags": [
+        "React",
+        "Electron",
+        "TailwindCSS",
+        "Framer Motion"
+      ],
+      "title": "Etonote",
+      "type": "web"
+    }
+  },
+  "Work": {
+    "2BczeXKiyTRmOv48": {
+      "company": "Ceruba",
+      "description": [
+        "Developing administrative panels for businesses that sign up to our platform.",
+        "Troubleshooting and debugging code issues to ensure smooth functioning of the platform.",
+        "Collaborating with cross-functional teams including backend team and designers."
+      ],
+      "endDate": "Present",
+      "id": "2BczeXKiyTRmOv48",
+      "image": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-35b84.appspot.com/o/work-screenshots%2FCeruba-work.png?alt=media&token=1e20a516-d188-4f11-ba33-636b5c556ec0",
+      "position": "Frontend Developer",
+      "startDate": "April 2023"
+    },
+    "VpdiNp3AkNPei0Gx": {
+      "company": "Slightly Techie",
+      "description": [
+        "Developed, maintained, and shipped production code for client websites primarily using HTML, CSS, Sass, JavaScript, and jQuery",
+        "Provide leadership within engineering department through close collaboration, knowledge shares, and mentorship",
+        "Collaborating with cross-functional teams including backend team and designers."
+      ],
+      "endDate": "Present",
+      "id": "VpdiNp3AkNPei0Gx",
+      "image": "",
+      "position": "Full Stack Developer",
+      "startDate": "Nov 2022"
+    }
+  }
+}
