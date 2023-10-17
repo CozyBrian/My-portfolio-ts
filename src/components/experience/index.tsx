@@ -53,9 +53,9 @@ const WorkSection = () => {
   ];
   return (
     <motion.section
-      // initial={{ opacity: 0, y: 50 }}
-      // whileInView={{ opacity: 1, y: 0 }}
-      // viewport={{ once: true }}
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
       transition={{ duration: 1.5 }}
       className="bg-tesla-800 min-h-[700px] mb-32 w-full flex flex-row justify-center items-center"
     >
@@ -120,7 +120,7 @@ const WorkSection = () => {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -25 }}
                       transition={{ duration: 0.2 }}
-                      className="py-2 flex flex-col gap-4"
+                      className="py-2 px-2 md:px-0 flex flex-col gap-4"
                     >
                       <div>
                         <p className="text-[#d6e1ee] text-xl mb-1">
