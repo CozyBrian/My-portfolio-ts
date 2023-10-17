@@ -4,14 +4,14 @@ import Image from "next/image";
 import { CozyMinecraft } from "@/assets/images";
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import classNames from "classnames";
-import useScreenSize from "@/hooks/useScreenSize";
+import { useWindowSize } from "usehooks-ts";
 
 const scrollThreshold = 80;
 const Header = () => {
   const { scrollY } = useScroll();
   const [isScrolled, setIsScrolled] = useState(false);
 
-  const screen = useScreenSize();
+  const screen = useWindowSize();
   const isMobile = screen.width <= 768;
 
   useMotionValueEvent(scrollY, "change", (latest) => {
