@@ -5,7 +5,7 @@ import ContactSection from "@/components/contact";
 export default function Home() {
   return (
     <>
-      <section className="h-[680px] w-full md:w-[880px] flex flex-col justify-center ">
+      <section className="h-[680px] w-full md:w-[880px] flex flex-col justify-center">
         <div className="flex flex-col gap-10">
           <h1 className="text-4xl font-semibold text-tesla-100 leading-relaxed font-nunitoSans">
             Hello, I&apos;m{" "}
@@ -14,9 +14,12 @@ export default function Home() {
             web and mobile experiences
           </h1>
           <div>
-            <button className="bg-tesla-800 h-11 hover:shadow-tesla-sm hover:-translate-y-0.5 outline outline-1 outline-transparent hover:outline-tesla-400 active:translate-y-0.5 shadow-tesla-800 text-tesla-500 hover:text-tesla-400 font-medium px-4 py-2 rounded-lg duration-200">
+            <a
+              href="#contact"
+              className="bg-tesla-800 h-11 hover:shadow-tesla-sm hover:-translate-y-0.5 outline outline-1 outline-transparent hover:outline-tesla-400 active:translate-y-0.5 shadow-tesla-800 text-tesla-500 hover:text-tesla-400 font-medium px-4 py-2 rounded-lg duration-200"
+            >
               Hire Me
-            </button>
+            </a>
           </div>
         </div>
       </section>
