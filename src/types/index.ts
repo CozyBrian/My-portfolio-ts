@@ -6,7 +6,7 @@ export type IProduct = {
   link: string;
   live: string;
   type: "web" | "mobile";
-  tags?: string[];
+  tags: string[];
 };
 
 export type IProfile = {
