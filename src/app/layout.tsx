@@ -5,12 +5,14 @@ import FONTS from "@/assets/fonts";
 import classNames from "classnames";
 import Footer from "@/components/layout/footer";
 import { OpenGraphImage } from "@/assets/images";
+import { Metadata } from "next";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Brian Newton | Hey 👀",
   description: "Brian Newton's personal website",
+  themeColor: "#060D14",
   openGraph: {
     title: "Brian Newton | Hey 👀",
     description:
@@ -42,11 +44,11 @@ export default function RootLayout({
         suppressHydrationWarning={true}
         className={classNames(
           inter.className,
-          "scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-tesla-400/80 snap-y scroll-smooth snap-mandatory",
+          "overflow-x-clip scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-tesla-400/80 snap-y scroll-smooth snap-mandatory",
         )}
       >
         <Header />
-        <main className="flex flex-col items-center">{children}</main>
+        <main className="w-screen flex flex-col items-center">{children}</main>
         <Footer />
       </body>
     </html>

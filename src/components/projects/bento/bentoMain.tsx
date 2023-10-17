@@ -20,7 +20,7 @@ const BentoMain = ({ title, description }: BentoMainProps) => {
       className={classNames(
         "flex-1 flex flex-col gap-4 bg-tesla-700/70 m-2 rounded-3xl p-8 cursor-pointer",
         "outline outline-1 outline-transparent hover:outline-tesla-600 duration-200 z-10",
-        isReadMore && "min-h-[204px] absolute",
+        isReadMore && "min-h-[204px] relative md:absolute",
       )}
     >
       <motion.p
@@ -38,8 +38,8 @@ const BentoMain = ({ title, description }: BentoMainProps) => {
         exit={{ opacity: 0 }}
         transition={{ duration: 0.2 }}
         className={classNames(
-          "text-tesla-text w-[360px]",
-          isReadMore ? "" : "h-24 line-clamp-4",
+          "text-tesla-text md:w-[360px]",
+          isReadMore ? "" : "md:h-24 line-clamp-4",
         )}
       >
         {description}

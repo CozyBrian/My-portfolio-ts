@@ -7,7 +7,7 @@ const ContactSection = () => {
       id="contact"
       className="w-full flex flex-row justify-center mb-24 items-center"
     >
-      <div className="w-full md:w-[880px] flex flex-col gap-10 text-tesla-text">
+      <div className="w-full md:w-[880px] px-4 md:px-0 flex flex-col gap-10 text-tesla-text">
         <h2 className="text-3xl font-medium tracking-wide">CONTACT</h2>
         <div className="text-lg">
           <p>Want to get in touch?</p>

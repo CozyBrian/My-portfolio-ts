@@ -4,11 +4,15 @@ import Image from "next/image";
 import { CozyMinecraft } from "@/assets/images";
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import classNames from "classnames";
+import useScreenSize from "@/hooks/useScreenSize";
 
 const scrollThreshold = 80;
 const Header = () => {
   const { scrollY } = useScroll();
   const [isScrolled, setIsScrolled] = useState(false);
+
+  const screen = useScreenSize();
+  const isMobile = screen.width <= 768;
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     if (latest > scrollThreshold && !isScrolled) {
@@ -20,8 +24,10 @@ const Header = () => {
 
   return (
     <motion.header
-      initial={{ height: 120 }}
-      animate={{ height: scrollY.get() > scrollThreshold ? 60 : 120 }}
+      initial={{ height: isMobile ? 60 : 120 }}
+      animate={{
+        height: isMobile ? 60 : scrollY.get() > scrollThreshold ? 60 : 120,
+      }}
       transition={{ duration: 0.1 }}
       className={classNames(
         "fixed top-0 left-0 flex items-center justify-center h-[120px] z-30",
@@ -29,7 +35,7 @@ const Header = () => {
         isScrolled ? "border-tesla-800" : "border-transparent",
       )}
     >
-      <div className="w-full md:w-[880px] h-full flex flex-row items-center justify-between z-50">
+      <div className="w-full px-4 md:px-0 md:w-[880px] h-full flex flex-row items-center justify-between z-50">
         <div className="w-fit h-11">
           <Image src={CozyMinecraft} className="h-full w-[72px]" alt="Logo" />
         </div>
@@ -43,7 +49,10 @@ const Header = () => {
           WebkitMaskClip: `content-box`,
           backdropFilter: `blur(12px)`,
         }}
-        className="absolute inset-[-18px] p-[18px]"
+        className={classNames(
+          "absolute ",
+          isMobile ? "inset-[-1px] p-[1px]" : "inset-[-18px] p-[18px]",
+        )}
       ></div>
     </motion.header>
   );

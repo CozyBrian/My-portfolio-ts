@@ -33,7 +33,7 @@ const BentoImage = ({ images, type }: BentoImageProps) => {
               transition={{
                 duration: 0.3,
               }}
-              className="fixed left-0 top-0 w-screen h-screen bg-black/40 flex items-center justify-center p-24 z-40"
+              className="fixed left-0 top-0 w-screen h-screen bg-black/40 flex items-center justify-center p-4 md:p-24 z-40"
             >
               <MotionImage
                 layoutId="test-image"
