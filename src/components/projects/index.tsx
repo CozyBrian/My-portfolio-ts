@@ -21,7 +21,7 @@ export default function ProjectsSection() {
 
   return (
     <section className="bg-tesla-800 min-h-[680px] mb-32 w-full flex flex-row justify-center items-center">
-      <div className="w-screen md:w-[880px] flex flex-col gap-10 my-12">
+      <div className="w-screen md:w-[880px] flex flex-col gap-10 my-12 md:my-0">
         <h2 className="pl-4 md:px-1 text-tesla-text text-3xl font-medium tracking-wide">
           PROJECTS
         </h2>
@@ -47,7 +47,7 @@ export default function ProjectsSection() {
               project.id === selectedProjectID && (
                 <motion.div
                   key={project.id}
-                  className="project-bento w-full md:h-[440px] px-3"
+                  className="project-bento w-full md:h-[440px] px-3 md:px-0"
                 >
                   <div className="bento-image flex md:h-[440px] md:aspect-square rounded-3xl">
                     <BentoImage images={project.image} type={project.type} />
