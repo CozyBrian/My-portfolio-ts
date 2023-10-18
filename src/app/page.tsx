@@ -5,6 +5,8 @@ import { getPortfolioData } from "@/services";
 import { Suspense } from "react";
 import ProjectsLoading from "@/components/projects/loading";
 
+export const dynamic = "force-dynamic";
+
 export default async function Home() {
   const { profileData } = await getPortfolioData();
 
