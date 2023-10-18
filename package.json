@@ -9,13 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@splitbee/web": "^0.3.0",
     "@types/node": "^20.8.2",
     "@types/react": "^18.2.24",
     "@types/react-dom": "^18.2.8",
     "autoprefixer": "10.4.14",
+    "axios": "^1.5.1",
     "classnames": "^2.3.2",
     "eslint": "^8.48.0",
     "eslint-config-next": "13.4.7",
+    "firebase": "^10.5.0",
     "framer-motion": "^10.16.4",
     "iconsax-react": "^0.0.8",
     "next": "^13.5.4",

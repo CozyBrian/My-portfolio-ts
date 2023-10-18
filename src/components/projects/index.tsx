@@ -2,22 +2,19 @@
 import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import classNames from "classnames";
-import PortfoliaData from "../../data/my-portfolio-data.json";
+
 import { IProduct } from "@/types";
 import BentoMain from "./bento/bentoMain";
 import BentoImage from "./bento/bentoImage";
 import BentoSub from "./bento/bentoSub";
 
-export default function ProjectsSection() {
+type ProjectSectionProps = {
+  projects: IProduct[];
+};
+export default function ProjectsSection({ projects }: ProjectSectionProps) {
   const [selectedProjectID, setSelectedProjectID] = useState(
-    PortfoliaData.Projects["5I7Z8hM9M7JhMKuv"].id,
+    projects[0].id as string,
   );
-
-  const projects: IProduct[] = [];
-
-  Object.entries(PortfoliaData.Projects).forEach(([key, value], index) => {
-    projects.push(value as IProduct);
-  });
 
   return (
     <section className="bg-tesla-800 min-h-[680px] mb-32 w-full flex flex-row justify-center items-center">

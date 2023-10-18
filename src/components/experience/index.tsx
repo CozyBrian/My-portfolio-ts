@@ -3,8 +3,13 @@ import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import cn from "classnames";
 import { ArrowRight } from "iconsax-react";
+import { IWork } from "@/types";
 
-const WorkSection = () => {
+type WorkSectionProps = {
+  work?: IWork[];
+  resume_url: string;
+};
+const WorkSection = ({ resume_url }: WorkSectionProps) => {
   const [selectedTab, setSelectedTab] = useState("a");
 
   const work = [
@@ -52,8 +57,6 @@ const WorkSection = () => {
     },
   ];
 
-  const RESUME_URL =
-    "https://drive.google.com/file/d/19WDzCgAgGZSXTg-vD__UNlnTqBorLiYu/view?usp=sharing";
   return (
     <section className="bg-tesla-800 min-h-[700px] mb-32 w-full flex flex-row justify-center items-center">
       <motion.div
@@ -170,7 +173,7 @@ const WorkSection = () => {
 
         <div className="pl-4 md:pl-0 flex flex-1 items-end">
           <a
-            href={RESUME_URL}
+            href={resume_url}
             target="_blank"
             rel="noreferrer"
             className="flex flex-row items-center gap-2 bg-tesla-700/70 h-11 outline outline-1 outline-transparent hover:outline-[#6e97c5] active:outline-[#c1d3e6] hover:shadow-tesla-sm hover:-translate-y-0.5 active:translate-y-0.5 shadow-tesla-800 text-tesla-300 active:text-[#c1d3e6] font-medium px-4 py-2 rounded-lg duration-200"

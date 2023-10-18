@@ -6,6 +6,7 @@ import classNames from "classnames";
 import Footer from "@/components/layout/footer";
 import { OpenGraphImage } from "@/assets/images";
 import { Metadata } from "next";
+import SplitBee from "./splitbee";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -48,7 +49,9 @@ export default function RootLayout({
         )}
       >
         <Header />
-        <main className="w-screen flex flex-col items-center">{children}</main>
+        <main className="w-screen flex flex-col items-center">
+          <SplitBee>{children}</SplitBee>
+        </main>
         <Footer />
       </body>
     </html>
