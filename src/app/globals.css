@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.project-bento {
+  display: grid; 
+
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+.bento-image {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.bento-main {
+  grid-row-start: 3;
+  grid-row-end: 4;
+  
+  grid-column-start: 1;
+  grid-column-end: 3;   
+}
+.bento-sub {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  
+  grid-row-start: 4;
+  grid-row-end: 5; 
+}
+
+@media (min-width: 768px) {
+  .project-bento {
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .bento-image {
+    grid-row-start: 1;
+    grid-column-start: 1;
+  
+    grid-row-end: 3;
+    grid-column-end: 3;
+  }
+  .bento-main {
+    grid-row-start: 1;
+    grid-column-start: 3;
+  
+    grid-row-end: 2;
+    grid-column-end: 5;   
+  }
+  .bento-sub {
+    grid-row-start: 2;
+    grid-column-start: 3;
+  
+    grid-row-end: 3;
+    grid-column-end: 5;
+  }
+}
+
+.x-contact-me:before {
+  --size: 150px;
+  --icon:  url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjxzdmcgd2lkdGg9IjMwMCIgaGVpZ2h0PSIzMDAuMjUxIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+DQogPHBhdGggZD0iTTE3OC41NyAxMjcuMTUgMjkwLjI3IDBoLTI2LjQ2bC05Ny4wMyAxMTAuMzhMODkuMzQgMEgwbDExNy4xMyAxNjYuOTNMMCAzMDAuMjVoMjYuNDZsMTAyLjQtMTE2LjU5IDgxLjggMTE2LjU5aDg5LjM0TTM2LjAxIDE5LjU0SDc2LjY2bDE4Ny4xMyAyNjIuMTNoLTQwLjY2Ii8+DQo8L3N2Zz4=);
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+  -webkit-mask-image: var(--icon);
+  mask-size: 16px;
+  -webkit-mask-size: 16px;
+  mask-image: var(--icon);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  background-color: currentColor;
+  margin-right: 0.18em;
+  transform: translateY(-2px);
+  text-rendering: optimizeLegibility;
+  font-size: inherit;
+  line-height: inherit;
+  box-sizing: border-box;
+  word-break: break-word;
+}
+
+.fade-x {
+  mask-image: linear-gradient(
+  to left,
+  transparent 0 0.5%,
+  #11253A   3% 97%,
+  transparent 99.5% 100%
+  );
+}
+  /* transparent,
+  85%,
+  #11253A */

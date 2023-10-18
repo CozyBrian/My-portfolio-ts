@@ -1,57 +1,45 @@
 {
   "name": "my-portfolio-ts",
+  "version": "0.1.0",
   "private": true,
-  "version": "0.0.0",
-  "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
-    "@emailjs/browser": "^3.10.0",
-    "@fortawesome/fontawesome-svg-core": "^6.1.1",
-    "@fortawesome/free-solid-svg-icons": "^6.1.1",
-    "@fortawesome/react-fontawesome": "^0.1.18",
-    "@testing-library/jest-dom": "^5.16.4",
-    "@testing-library/react": "^13.3.0",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.5.2",
-    "@types/node": "^16.11.39",
-    "firebase": "^9.8.3",
-    "framer-motion": "^7.2.1",
-    "preline": "^1.1.2",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-hook-form": "^7.39.7",
-    "react-loader-spinner": "^5.3.4",
-    "react-particles": "^2.7.1",
-    "sitenary": "^0.1.1",
-    "tsparticles": "^2.7.1",
-    "tsparticles-engine": "^2.7.1",
-    "typescript": "4.9.3",
-    "typewriter-effect": "^2.19.0",
-    "web-vitals": "^2.1.4"
+    "@splitbee/web": "^0.3.0",
+    "@types/node": "^20.8.2",
+    "@types/react": "^18.2.24",
+    "@types/react-dom": "^18.2.8",
+    "autoprefixer": "10.4.14",
+    "axios": "^1.5.1",
+    "classnames": "^2.3.2",
+    "eslint": "^8.48.0",
+    "eslint-config-next": "13.4.7",
+    "firebase": "^10.5.0",
+    "framer-motion": "^10.16.4",
+    "iconsax-react": "^0.0.8",
+    "next": "^13.5.4",
+    "postcss": "8.4.24",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "tailwind-merge": "^1.14.0",
+    "tailwind-scrollbar": "^3.0.5",
+    "tailwindcss": "^3.3.3",
+    "typescript": "^5.2.2",
+    "usehooks-ts": "^2.9.1"
   },
   "devDependencies": {
-    "@types/react": "18.0.28",
-    "@types/react-dom": "18.0.11",
-    "@vitejs/plugin-react": "^3.1.0",
-    "autoprefixer": "^10.4.8",
-    "eslint": "^8.38.0",
-    "eslint-config-prettier": "^8.8.0",
+    "eslint-config-prettier": "^9.0.0",
     "eslint-config-react-app": "^7.0.1",
-    "eslint-plugin-prettier": "^4.2.1",
-    "postcss": "^8.4.16",
-    "prettier": "^2.8.7",
-    "tailwind-scrollbar": "^2.0.1",
-    "tailwindcss": "^3.1.8",
-    "vite": "^4.2.0"
+    "eslint-plugin-prettier": "^5.0.0",
+    "prettier": "^3.0.3"
   },
   "eslintConfig": {
     "extends": [
-      "react-app",
-      "react-app/jest"
+      "react-app"
     ]
   }
 }

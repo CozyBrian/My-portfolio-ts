@@ -1,0 +1,6 @@
+{
+  "extends": ["next/core-web-vitals", "react-app", "plugin:prettier/recommended"],
+  "rules":{
+    "linebreak-style": 0   // <----------
+  }
+}
