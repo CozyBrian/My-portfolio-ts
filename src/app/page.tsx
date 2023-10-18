@@ -2,9 +2,11 @@ import WorkSection from "@/components/experience";
 import ProjectsSection from "@/components/projects";
 import ContactSection from "@/components/contact";
 import { getPortfolioData } from "@/services";
+import { Suspense } from "react";
+import ProjectsLoading from "@/components/projects/loading";
 
 export default async function Home() {
-  const { profileData, projectsData } = await getPortfolioData();
+  const { profileData } = await getPortfolioData();
 
   return (
     <>
@@ -28,8 +30,9 @@ export default async function Home() {
       </section>
 
       <WorkSection resume_url={profileData.resume} />
-
-      <ProjectsSection projects={projectsData} />
+      <Suspense fallback={<ProjectsLoading />}>
+        <ProjectsSection />
+      </Suspense>
 
       <ContactSection />
     </>

@@ -7,9 +7,9 @@ import { IWork } from "@/types";
 
 type WorkSectionProps = {
   work?: IWork[];
-  resume_url: string;
+  resume_url?: string;
 };
-const WorkSection = ({ resume_url }: WorkSectionProps) => {
+const WorkSection = ({ resume_url = "" }: WorkSectionProps) => {
   const [selectedTab, setSelectedTab] = useState("a");
 
   const work = [
