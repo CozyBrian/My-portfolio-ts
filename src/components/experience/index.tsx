@@ -51,15 +51,18 @@ const WorkSection = () => {
       stack: ["Typescript", "NextJS", "Tailwind"],
     },
   ];
+
+  const RESUME_URL =
+    "https://drive.google.com/file/d/19WDzCgAgGZSXTg-vD__UNlnTqBorLiYu/view?usp=sharing";
   return (
-    <motion.section
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 1.5 }}
-      className="bg-tesla-800 min-h-[700px] mb-32 w-full flex flex-row justify-center items-center"
-    >
-      <div className="w-screen md:w-[880px] min-h-[700px] py-14 flex flex-col gap-16">
+    <section className="bg-tesla-800 min-h-[700px] mb-32 w-full flex flex-row justify-center items-center">
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1.5 }}
+        className="w-screen md:w-[880px] min-h-[700px] py-14 flex flex-col gap-16"
+      >
         <h2 className="pl-4 md:pl-0 text-tesla-text text-3xl font-medium tracking-wide">
           EXPERIENCE
         </h2>
@@ -166,13 +169,18 @@ const WorkSection = () => {
         </div>
 
         <div className="pl-4 md:pl-0 flex flex-1 items-end">
-          <button className="flex flex-row items-center gap-2 bg-tesla-700/70 h-11 outline outline-1 outline-transparent hover:outline-[#6e97c5] active:outline-[#c1d3e6] hover:shadow-tesla-sm hover:-translate-y-0.5 active:translate-y-0.5 shadow-tesla-800 text-tesla-300 active:text-[#c1d3e6] font-medium px-4 py-2 rounded-lg duration-200">
+          <a
+            href={RESUME_URL}
+            target="_blank"
+            rel="noreferrer"
+            className="flex flex-row items-center gap-2 bg-tesla-700/70 h-11 outline outline-1 outline-transparent hover:outline-[#6e97c5] active:outline-[#c1d3e6] hover:shadow-tesla-sm hover:-translate-y-0.5 active:translate-y-0.5 shadow-tesla-800 text-tesla-300 active:text-[#c1d3e6] font-medium px-4 py-2 rounded-lg duration-200"
+          >
             <p>View Full Résumé</p>
             <ArrowRight />
-          </button>
+          </a>
         </div>
-      </div>
-    </motion.section>
+      </motion.div>
+    </section>
   );
 };
 
