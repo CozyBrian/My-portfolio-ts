@@ -1,24 +1,10 @@
 import WorkSection from "@/components/experience";
 import ProjectsSection from "@/components/projects";
 import ContactSection from "@/components/contact";
-import axios from "axios";
-import { config } from "@/constants";
-import { IProduct } from "@/types";
+import { getPortfolioData } from "@/services";
 
 export default async function Home() {
-  const { data: rawProjectsData } = await axios.get<{
-    [key: string]: IProduct;
-  }>(`${config.FIREBASE_DATABASEURL}/Projects.json`);
-
-  const { data: profileData } = await axios.get<{
-    resume: string;
-  }>(`${config.FIREBASE_DATABASEURL}/Profile.json`);
-
-  const projectsData = Object.entries(rawProjectsData).map(
-    ([key, value], index) => {
-      return value;
-    },
-  );
+  const { profileData, projectsData } = await getPortfolioData();
 
   return (
     <>
