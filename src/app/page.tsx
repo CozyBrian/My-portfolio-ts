@@ -1,14 +1,15 @@
 import WorkSection from "@/components/experience";
 import ProjectsSection from "@/components/projects";
 import ContactSection from "@/components/contact";
-import { getPortfolioData } from "@/services";
+import { getProfileData } from "@/services";
 import { Suspense } from "react";
 import ProjectsLoading from "@/components/projects/loading";
+import WorkSectionLoading from "@/components/experience/loading";
 
 export const dynamic = "force-dynamic";
 
 export default async function Home() {
-  const { profileData } = await getPortfolioData();
+  const { profileData } = await getProfileData();
 
   return (
     <>
@@ -30,8 +31,9 @@ export default async function Home() {
           </div>
         </div>
       </section>
-
-      <WorkSection resume_url={profileData.resume} />
+      <Suspense fallback={<WorkSectionLoading />}>
+        <WorkSection resume_url={profileData.resume} />
+      </Suspense>
       <Suspense fallback={<ProjectsLoading />}>
         <ProjectsSection />
       </Suspense>

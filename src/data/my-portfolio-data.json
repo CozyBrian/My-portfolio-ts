@@ -1,11 +1,11 @@
 {
   "Profile": {
     "profileImage": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-35b84.appspot.com/o/profile%2Fprofile.jpg?alt=media&token=8f554611-efa3-432f-83f7-d6a62fcf95bd",
-    "resume": "https://drive.google.com/file/d/13ooyV8ho369kFIZr0LSGOiLssp_ltqjm/view?usp=sharing"
+    "resume": "https://drive.google.com/file/d/19WDzCgAgGZSXTg-vD__UNlnTqBorLiYu/view?usp=sharing"
   },
   "Projects": {
     "5I7Z8hM9M7JhMKuv": {
-      "disc": "Sitenary(Web) is a website analytics service that provides users with comprehensive information on various aspects of their website. Such as the number of views and where users visit their site.",
+      "disc": "Sitenary(web) is a website analytics service that provides users with comprehensive information on various aspects of their website. Such as the number of views and where users visit their site.",
       "id": "5I7Z8hM9M7JhMKuv",
       "image": [
         "https://firebasestorage.googleapis.com/v0/b/my-portfolio-35b84.appspot.com/o/projects-screenshots%2FScreenshot%202023-03-09%20at%2012.17.18%20AM.png?alt=media&token=dbdd833c-0103-46f7-be84-bd2cc029873a",
@@ -13,6 +13,7 @@
       ],
       "link": "https://github.com/CozyBrian/Sitenary",
       "live": "https://sitenary-web-huuh3.ondigitalocean.app",
+      "pos": 0,
       "tags": [
         "React",
         "ExpressJs",
@@ -33,6 +34,7 @@
       ],
       "link": "https://github.com/CozyBrian/Etochat-Web",
       "live": "https://etochat-web.onrender.com/",
+      "pos": 4,
       "tags": [
         "React",
         "NodeJs",
@@ -49,6 +51,7 @@
       ],
       "link": "https://github.com/CozyBrian/MealsToGo",
       "live": "",
+      "pos": 5,
       "tags": [
         "React Native"
       ],
@@ -65,6 +68,7 @@
       ],
       "link": "https://github.com/CozyBrian/SpotiStats",
       "live": "https://spotistats-web.netlify.app",
+      "pos": 2,
       "tags": [
         "React",
         "NodeJs",
@@ -82,6 +86,7 @@
       ],
       "link": "https://github.com/CozyBrian/QuakerMan",
       "live": "",
+      "pos": 3,
       "tags": [
         "NodeJs",
         "ExpressJS",
@@ -99,6 +104,7 @@
       ],
       "link": "https://github.com/CozyBrian/hangout",
       "live": "",
+      "pos": 6,
       "tags": [
         "Flutter",
         "NodeJs",
@@ -116,6 +122,7 @@
       ],
       "link": "https://github.com/CozyBrian/Etonote",
       "live": "https://etonotes.netlify.app/",
+      "pos": 1,
       "tags": [
         "React",
         "Electron",
@@ -130,28 +137,66 @@
     "2BczeXKiyTRmOv48": {
       "company": "Ceruba",
       "description": [
-        "Developing administrative panels for businesses that sign up to our platform.",
+        "Developed administrative panels for our clients to view reports, track sales, and gain insight on their business’ performance on our platform using TypeScript, React and NextJS.",
         "Troubleshooting and debugging code issues to ensure smooth functioning of the platform.",
-        "Collaborating with cross-functional teams including backend team and designers."
+        "collaborating with teams across departments to align front-end development with back-end and design efforts, ensuring seamless product integration."
       ],
       "endDate": "Present",
       "id": "2BczeXKiyTRmOv48",
       "image": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-35b84.appspot.com/o/work-screenshots%2FCeruba-work.png?alt=media&token=1e20a516-d188-4f11-ba33-636b5c556ec0",
+      "pos": 1,
       "position": "Frontend Developer",
-      "startDate": "April 2023"
+      "stack": [
+        "React",
+        "NextJS",
+        "Typescript",
+        "AWS",
+        "Tailwind"
+      ],
+      "startDate": "March 2023",
+      "url": "https://www.ceruba.com"
     },
     "VpdiNp3AkNPei0Gx": {
       "company": "Slightly Techie",
       "description": [
-        "Developed, maintained, and shipped production code for client websites primarily using HTML, CSS, Sass, JavaScript, and jQuery",
-        "Provide leadership within engineering department through close collaboration, knowledge shares, and mentorship",
-        "Collaborating with cross-functional teams including backend team and designers."
+        "Led a team of young engineers to build a CRM web application using FastAPI with Python and React with TypeScript. The CRM makes getting information easy and has decreased the turnaround time for most activities by over 70%.",
+        "Developed a Discord bot to streamline team communication by automating certain repetitive tasks. This has reduced time spent on issue resolution by over 50%. Technologies used were TypeScript, ExpressJS and MongoDB",
+        "Adapted swiftly to emerging technologies and implemented them effectively in projects while sharing the knowledge with other teammates. This has saved the team the cost of finding over 5 developers in different areas of expertise and has fostered a culture of continuous learning."
       ],
       "endDate": "Present",
       "id": "VpdiNp3AkNPei0Gx",
       "image": "",
+      "pos": 0,
       "position": "Full Stack Developer",
-      "startDate": "Nov 2022"
+      "stack": [
+        "Typescript",
+        "NextJS",
+        "Tailwind",
+        "ExpressJS",
+        "MongoDB"
+      ],
+      "startDate": "Dec 2022",
+      "url": "https://slightlytechie.com/"
+    },
+    "uLibMS1LQYfk0QGb": {
+      "company": "Xenon-Limited",
+      "description": [
+        "Cooperated with UI designer to rebuild company website with newer technologies such as (TypeScript, React and NextJS) and exceptional User Interface and User Experience.",
+        "Implemented SEO best practices to improve the website's search engine ranking and visibility by 14%.",
+        "Enhanced user engagement by optimizing page load times and improving overall website performance by as much as 20%, resulting in longer user stay durations."
+      ],
+      "endDate": "July 2023",
+      "id": "uLibMS1LQYfk0QGb",
+      "image": "",
+      "pos": 2,
+      "position": "Junior Software Developer Intern",
+      "stack": [
+        "Typescript",
+        "NextJS",
+        "Tailwind"
+      ],
+      "startDate": "May",
+      "url": "https://www.xenonlimited.com"
     }
   }
 }

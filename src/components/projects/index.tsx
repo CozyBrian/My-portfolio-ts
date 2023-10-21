@@ -1,11 +1,11 @@
 import React from "react";
-import { getPortfolioData } from "@/services";
 import Bento from "./bento";
+import { getProjectsData } from "@/services";
 
 export const dynamic = "force-dynamic";
 
 export default async function ProjectsSection() {
-  const { projectsData: projects } = await getPortfolioData();
+  const { projectsData: projects } = await getProjectsData();
 
   return (
     <section className="bg-tesla-800 min-h-[680px] mb-32 w-full flex flex-row justify-center items-center">

@@ -21,13 +21,13 @@ const BentoLoading = () => {
 
       <div className="project-bento w-full md:h-[440px] px-3 md:px-0">
         <div className="bento-image flex md:h-[440px] md:aspect-square rounded-3xl">
-          <div className="flex-1 bg-tesla-700/70 m-2 rounded-3xl" />
+          <div className="flex-1 bg-tesla-700/70 m-2 rounded-3xl animate-pulse" />
         </div>
         <div className="relative flex bento-main">
-          <div className="flex-1 bg-tesla-700/70 m-2 rounded-3xl" />
+          <div className="flex-1 bg-tesla-700/70 m-2 rounded-3xl animate-pulse delay-150" />
         </div>
         <div className="flex bento-sub">
-          <div className="flex-1 bg-tesla-700/70 m-2 rounded-3xl" />
+          <div className="flex-1 bg-tesla-700/70 m-2 rounded-3xl animate-pulse delay-300" />
         </div>
       </div>
 
@@ -37,7 +37,7 @@ const BentoLoading = () => {
             key={i}
             className={classNames(
               "flex items-center justify-center shrink-0 h-11 w-[115px] px-6 bg-tesla-500/10 rounded-md outline outline-1 duration-150",
-              "text-tesla-500 outline-transparent",
+              "text-tesla-500 outline-transparent animate-pulse",
             )}
           >
             {project.title}

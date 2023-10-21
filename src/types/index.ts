@@ -7,17 +7,19 @@ export type IProduct = {
   live: string;
   type: "web" | "mobile";
   tags: string[];
+  pos: number;
 };
 
 export type IWork = {
   id: string;
-  title: string;
+  company: string;
   url: string;
   position: string;
   startDate: string;
   endDate: string;
   description: string[];
   stack: string[];
+  pos: number;
 };
 
 export type IProfile = {
