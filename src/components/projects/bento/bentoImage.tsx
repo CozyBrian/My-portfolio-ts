@@ -46,8 +46,8 @@ const BentoImage = ({ images, type }: BentoImageProps) => {
                 }}
                 onClick={() => setIsFull(!isFull)}
                 src={images[0]}
-                width={type === "web" ? 1200 : 330}
-                height={760}
+                width={type === "web" ? 1784 : 330}
+                height={1121}
                 className={classNames(
                   "object-contain z-20",
                   type === "web" ? "w-full" : "h-full",

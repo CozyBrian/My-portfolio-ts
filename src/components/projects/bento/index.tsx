@@ -63,7 +63,7 @@ const Bento = ({ projects }: { projects: IProduct[] }) => {
             key={project.id}
             onClick={() => setSelectedProjectID(project.id)}
             className={classNames(
-              "flex items-center justify-center h-11 px-6 bg-tesla-500/10 rounded-md outline outline-1 duration-150",
+              "flex shrink-0 items-center justify-center h-11 px-6 bg-tesla-500/10 rounded-md outline outline-1 duration-150",
               selectedProjectID === project.id
                 ? "text-tesla-400 outline-tesla-600"
                 : "text-tesla-500 outline-transparent",
