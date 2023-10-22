@@ -13,19 +13,23 @@ type BentoImageProps = {
 const BentoImage = ({ images, type }: BentoImageProps) => {
   const [isFull, setIsFull] = useState(false);
   const [showImage, setShowImage] = useState(false);
+  const [showImageSelector, setShowImageSelector] = useState(false);
+
+  const [selectedImage, setSelectedImage] = useState(0);
 
   useLayoutEffect(() => {
     setShowImage(false);
+    setShowImageSelector(false);
   }, [images]);
 
   return (
-    <div className="flex-1 bg-tesla-700/70 m-2 rounded-3xl">
+    <div className="relative flex-1 bg-tesla-700/70 m-2 rounded-3xl">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: showImage ? 1 : 0 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.2 }}
-        className="w-full h-full flex items-center justify-center p-8"
+        className="w-full h-full flex flex-col items-center justify-center p-8"
       >
         <AnimatePresence>
           {isFull ? (
@@ -45,7 +49,7 @@ const BentoImage = ({ images, type }: BentoImageProps) => {
                   scale: 1,
                 }}
                 onClick={() => setIsFull(!isFull)}
-                src={images[0]}
+                src={images[selectedImage]}
                 width={type === "web" ? 1784 : 330}
                 height={1121}
                 className={classNames(
@@ -69,8 +73,9 @@ const BentoImage = ({ images, type }: BentoImageProps) => {
               onLoad={async () => {
                 await new Promise((resolve) => setTimeout(resolve, 300));
                 setShowImage(true);
+                setShowImageSelector(true);
               }}
-              src={images[0]}
+              src={images[selectedImage]}
               width={type === "web" ? 360 : 180}
               height={230}
               className={classNames(
@@ -81,6 +86,38 @@ const BentoImage = ({ images, type }: BentoImageProps) => {
             />
           )}
         </AnimatePresence>
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: showImageSelector ? 1 : 0 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.2 }}
+        className="absolute bottom-0 flex flex-row items-center justify-center gap-2 h-10 w-full"
+      >
+        {images.map((image, index) => (
+          <button
+            key={image}
+            onClick={async () => {
+              setShowImage(false);
+              await new Promise((resolve) => setTimeout(resolve, 300));
+              setSelectedImage(index);
+              await new Promise((resolve) => setTimeout(resolve, 300));
+              setShowImage(true);
+            }}
+            className={classNames(
+              "h-full w-10 flex items-center justify-center group",
+            )}
+          >
+            <span
+              className={classNames(
+                "w-full h-2 rounded-full duration-150",
+                index === selectedImage
+                  ? "bg-sky-600/40"
+                  : "bg-sky-600/20 group-hover:bg-sky-600/40",
+              )}
+            ></span>
+          </button>
+        ))}
       </motion.div>
       <Image
         onClick={() => setIsFull(!isFull)}

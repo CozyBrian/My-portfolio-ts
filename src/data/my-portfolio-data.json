@@ -4,16 +4,53 @@
     "resume": "https://drive.google.com/file/d/19WDzCgAgGZSXTg-vD__UNlnTqBorLiYu/view?usp=sharing"
   },
   "Projects": {
+    "1dkp4G-5lR4Z4wPE": {
+      "disc": "Landing pages for Ceruba personal and Ceruba Business",
+      "id": "1dkp4G-5lR4Z4wPE",
+      "image": [
+        "https://firebasestorage.googleapis.com/v0/b/my-portfolio-35b84.appspot.com/o/projects-screenshots%2FCeruba-1.png?alt=media&token=1f0fc373-83d7-452e-9cef-48976a83a860",
+        "https://firebasestorage.googleapis.com/v0/b/my-portfolio-35b84.appspot.com/o/projects-screenshots%2FUntitled-1.png?alt=media&token=85d2fa1f-813a-4ac4-bc97-b3a7ca9eeeeb"
+      ],
+      "link": "",
+      "live": "https://www.ceruba.com",
+      "pos": 1,
+      "tags": [
+        "React",
+        "NextJS",
+        "Typescript",
+        "TailwindCSS"
+      ],
+      "title": "Ceruba",
+      "type": "web"
+    },
+    "1uQL56CV9uTuqhCF": {
+      "disc": "Built an extensive Web Admin dashboard for a client with a pharmacy mobile app to help manage and run his business more effectively.",
+      "id": "1uQL56CV9uTuqhCF",
+      "image": [
+        "https://firebasestorage.googleapis.com/v0/b/my-portfolio-35b84.appspot.com/o/projects-screenshots%2FUntitled-0.png?alt=media&token=4c9bda79-121e-40c6-8b4c-9400e24987f4"
+      ],
+      "link": "",
+      "live": "",
+      "pos": 2,
+      "tags": [
+        "NextJS",
+        "React",
+        "TailwindCSS"
+      ],
+      "title": "MHPharmacy Admin",
+      "type": "web"
+    },
     "5I7Z8hM9M7JhMKuv": {
-      "disc": "Sitenary(web) is a website analytics service that provides users with comprehensive information on various aspects of their website. Such as the number of views and where users visit their site.",
+      "disc": "Sitenary is a website analytics service that provides users with comprehensive information on various aspects of their website. Such as the number of views and where users visit their site.",
       "id": "5I7Z8hM9M7JhMKuv",
       "image": [
-        "https://firebasestorage.googleapis.com/v0/b/my-portfolio-35b84.appspot.com/o/projects-screenshots%2FScreenshot%202023-03-09%20at%2012.17.18%20AM.png?alt=media&token=dbdd833c-0103-46f7-be84-bd2cc029873a",
-        "https://firebasestorage.googleapis.com/v0/b/my-portfolio-35b84.appspot.com/o/projects-screenshots%2FScreenshot%202023-03-09%20at%2012.18.09%20AM.png?alt=media&token=3bcef90f-e07f-4f93-a137-9514b7fbf602"
+        "https://firebasestorage.googleapis.com/v0/b/my-portfolio-35b84.appspot.com/o/projects-screenshots%2FSitenary-2.png?alt=media&token=7d664390-bfa1-4d19-b0f3-6d340ad50638",
+        "https://firebasestorage.googleapis.com/v0/b/my-portfolio-35b84.appspot.com/o/projects-screenshots%2FSitenary-3.png?alt=media&token=04611ec2-0c40-4fce-9e94-968ee93eebc9",
+        "https://firebasestorage.googleapis.com/v0/b/my-portfolio-35b84.appspot.com/o/projects-screenshots%2FSitenary-4.png?alt=media&token=2c25b169-e230-4039-b23f-036365b67bf1"
       ],
       "link": "https://github.com/CozyBrian/Sitenary",
-      "live": "https://sitenary-web-huuh3.ondigitalocean.app",
-      "pos": 0,
+      "live": "https://sitenary.onrender.com",
+      "pos": 3,
       "tags": [
         "React",
         "ExpressJs",
@@ -28,8 +65,8 @@
       "disc": "This is an anonymous peer to peer audio chat web app. using React for the front end and NodeJs for the backend",
       "id": "AvCiVIumEihG_FME",
       "image": [
-        "https://firebasestorage.googleapis.com/v0/b/my-portfolio-35b84.appspot.com/o/projects-screenshots%2FEtoChat-ScreenShot.png?alt=media&token=1a3d9c60-dde9-4a88-aab5-a3adba890bf4",
-        "https://firebasestorage.googleapis.com/v0/b/my-portfolio-35b84.appspot.com/o/projects-screenshots%2FEtoChat-ScreenShot-2.png?alt=media&token=2b2929f6-c8ca-48be-9699-d1a7f2ffe23c",
+        "https://firebasestorage.googleapis.com/v0/b/my-portfolio-35b84.appspot.com/o/projects-screenshots%2FEtoChat-3.png?alt=media&token=2d7163b5-4ec6-46ee-8cb5-e1f604593277",
+        "https://firebasestorage.googleapis.com/v0/b/my-portfolio-35b84.appspot.com/o/projects-screenshots%2FEtoChat-4.png?alt=media&token=276c6dd1-8226-4e7f-989d-8f4089f7d474",
         "https://firebasestorage.googleapis.com/v0/b/my-portfolio-35b84.appspot.com/o/projects-screenshots%2FEtoChat-ScreenShot-3.png?alt=media&token=3416a556-144a-4242-9ece-6bf425c00aa0"
       ],
       "link": "https://github.com/CozyBrian/Etochat-Web",
@@ -51,7 +88,7 @@
       ],
       "link": "https://github.com/CozyBrian/MealsToGo",
       "live": "",
-      "pos": 5,
+      "pos": 8,
       "tags": [
         "React Native"
       ],
@@ -62,13 +99,13 @@
       "disc": "Welcome to SpotiStats, the web app that allows you to see your Spotify statistics, like top songs and top artists.",
       "id": "Jh-fbLtvT4q1UiD0",
       "image": [
-        "https://firebasestorage.googleapis.com/v0/b/my-portfolio-35b84.appspot.com/o/projects-screenshots%2FSpotiStats.png?alt=media&token=d30c7bfe-b22e-4a88-b72b-088b81a86ef4",
-        "https://firebasestorage.googleapis.com/v0/b/my-portfolio-35b84.appspot.com/o/projects-screenshots%2FSpotistats2.png?alt=media&token=3f6279e9-347f-45a5-977f-5faccf75872a",
-        "https://firebasestorage.googleapis.com/v0/b/my-portfolio-35b84.appspot.com/o/projects-screenshots%2FSimulator%20Screen%20Shot%20-%20iPhone%2014%20Pro%20-%202023-01-02%20at%2001.43.52.png?alt=media&token=7990817e-e4e5-47f2-be3c-7d8f3d5181a7"
+        "https://firebasestorage.googleapis.com/v0/b/my-portfolio-35b84.appspot.com/o/projects-screenshots%2FSpotiStats-4.png?alt=media&token=978072bb-a81e-4a70-b317-4a8774114c33",
+        "https://firebasestorage.googleapis.com/v0/b/my-portfolio-35b84.appspot.com/o/projects-screenshots%2FSpotiStats-5.png?alt=media&token=9288f7d0-2800-4a22-9be7-421377c4545e",
+        "https://firebasestorage.googleapis.com/v0/b/my-portfolio-35b84.appspot.com/o/projects-screenshots%2FSpotiStats-6.png?alt=media&token=c9d3cd07-6503-4f76-9ea3-3cdef265c9d5"
       ],
       "link": "https://github.com/CozyBrian/SpotiStats",
       "live": "https://spotistats-web.netlify.app",
-      "pos": 2,
+      "pos": 6,
       "tags": [
         "React",
         "NodeJs",
@@ -86,7 +123,7 @@
       ],
       "link": "https://github.com/CozyBrian/QuakerMan",
       "live": "",
-      "pos": 3,
+      "pos": 7,
       "tags": [
         "NodeJs",
         "ExpressJS",
@@ -94,6 +131,27 @@
         "Twitter-Api"
       ],
       "title": "QuakerMan",
+      "type": "web"
+    },
+    "Rvp3DOhovGpCwH5O": {
+      "disc": "The landing page for Xenon-Limited",
+      "id": "Rvp3DOhovGpCwH5O",
+      "image": [
+        "https://firebasestorage.googleapis.com/v0/b/my-portfolio-35b84.appspot.com/o/projects-screenshots%2FUntitled-3.png?alt=media&token=0dc3c8a0-8850-4311-8d2d-997a764a74d8",
+        "https://firebasestorage.googleapis.com/v0/b/my-portfolio-35b84.appspot.com/o/projects-screenshots%2FUntitled-2.png?alt=media&token=3d6c32e0-814c-4b32-98ae-98856ea79286",
+        "https://firebasestorage.googleapis.com/v0/b/my-portfolio-35b84.appspot.com/o/projects-screenshots%2FXenonLimited-3.png?alt=media&token=ec26f12f-282b-41fc-b610-a4d033eb4672"
+      ],
+      "link": "",
+      "live": "https://www.xenonlimited.com",
+      "pos": 0,
+      "tags": [
+        "React",
+        "NextJS",
+        "Typescript",
+        "Tailwind",
+        "Framer Motion"
+      ],
+      "title": "Xenon Limited",
       "type": "web"
     },
     "WEiNiRE_YohrM23h": {
@@ -104,7 +162,7 @@
       ],
       "link": "https://github.com/CozyBrian/hangout",
       "live": "",
-      "pos": 6,
+      "pos": 9,
       "tags": [
         "Flutter",
         "NodeJs",
@@ -117,12 +175,12 @@
       "disc": "This is a simple back to basics todo-list app that is focused on user experiences, demonstrating beautiful animations and transitions. You can try it out with email: demo@etonote.com and password: demo1234",
       "id": "xXoQ1YVdBpoo3_pF",
       "image": [
-        "https://firebasestorage.googleapis.com/v0/b/my-portfolio-35b84.appspot.com/o/projects-screenshots%2FScreenshot%20(47).png?alt=media&token=832f7189-bb3a-4669-b10c-7bd8c1cfca6b",
-        "https://firebasestorage.googleapis.com/v0/b/my-portfolio-35b84.appspot.com/o/projects-screenshots%2FScreenshot%202022-12-05%20at%208.14.37%20PM.png?alt=media&token=3eb9e372-126c-407c-ac34-09b3ccd361e3"
+        "https://firebasestorage.googleapis.com/v0/b/my-portfolio-35b84.appspot.com/o/projects-screenshots%2FEtonote-2.png?alt=media&token=2c5439aa-61d3-4655-ac94-ab77e91c51b7",
+        "https://firebasestorage.googleapis.com/v0/b/my-portfolio-35b84.appspot.com/o/projects-screenshots%2FEtonote-3.png?alt=media&token=77653401-d6d1-44dc-9db3-76ea36ad7084"
       ],
       "link": "https://github.com/CozyBrian/Etonote",
       "live": "https://etonotes.netlify.app/",
-      "pos": 1,
+      "pos": 6,
       "tags": [
         "React",
         "Electron",
@@ -179,7 +237,7 @@
       "url": "https://slightlytechie.com/"
     },
     "uLibMS1LQYfk0QGb": {
-      "company": "Xenon-Limited",
+      "company": "Xenon Limited",
       "description": [
         "Cooperated with UI designer to rebuild company website with newer technologies such as (TypeScript, React and NextJS) and exceptional User Interface and User Experience.",
         "Implemented SEO best practices to improve the website's search engine ranking and visibility by 14%.",
