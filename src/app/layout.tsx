@@ -7,6 +7,7 @@ import Footer from "@/components/layout/footer";
 import { OpenGraphImage } from "@/assets/images";
 import { Metadata } from "next";
 import SplitBee from "./splitbee";
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -53,6 +54,7 @@ export default function RootLayout({
           <SplitBee>{children}</SplitBee>
         </main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
