@@ -8,6 +8,7 @@ import { OpenGraphImage } from "@/assets/images";
 import { Metadata } from "next";
 import SplitBee from "./splitbee";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -55,6 +56,7 @@ export default function RootLayout({
         </main>
         <Footer />
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
