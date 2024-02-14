@@ -8,14 +8,47 @@ const WorkExperience = ({ work }: { work: IWork[] }) => {
   const [selectedTab, setSelectedTab] = useState(work[0].id);
   return (
     <>
-      <div className="w-full md:w-[10rem] pl-8 md:pl-0 shrink-0 overflow-scroll md:overflow-clip">
-        <div className="h-12 md:w-[10rem] justify-center md:justify-start md:h-full flex flex-row md:flex-col shrink-0">
+      <div className="md:hidden flex flex-row h-12 overflow-x-scroll scrollbar-none">
+        {work.map((item) => (
+          <div
+            key={item.id}
+            onClick={() => setSelectedTab(item.id)}
+            className={cn(
+              "relative h-full px-6 flex items-center justify-center cursor-pointer shrink-0 duration-150",
+              "hover:bg-tesla-500/10 group",
+              item.id === selectedTab ? "text-tesla-300" : "text-[#26568a]",
+              item.id === selectedTab && "bg-tesla-500/10",
+            )}
+          >
+            {item.company}
+            <motion.div
+              className={cn(
+                "absolute w-full h-0.5 bottom-0 left-0",
+                "bg-[#26568a]/30",
+              )}
+            ></motion.div>
+            <AnimatePresence>
+              {item.id === selectedTab && (
+                <motion.div
+                  layoutId="tab-highlight-m"
+                  className={cn(
+                    "absolute  w-full h-0.5 bottom-0 left-0",
+                    "bg-tesla-300",
+                  )}
+                ></motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+        ))}
+      </div>
+      <div className="hidden md:block w-full md:w-[12rem] pl-8 md:pl-0 shrink-0 overflow-scroll md:overflow-clip">
+        <div className="h-12 md:w-[12rem] justify-center md:justify-start md:h-full flex flex-row md:flex-col shrink-0">
           {work.map((item) => (
             <div
               key={item.id}
               onClick={() => setSelectedTab(item.id)}
               className={cn(
-                "h-12 w-[9rem] flex-col md:flex-row relative cursor-pointer shrink-0 duration-150",
+                "h-12 w-full flex-col md:flex-row relative cursor-pointer shrink-0 duration-150",
                 "hover:bg-tesla-500/10 group",
                 item.id === selectedTab && "bg-tesla-500/10",
               )}
@@ -82,7 +115,7 @@ const WorkExperience = ({ work }: { work: IWork[] }) => {
                   {item.description.map((desc, docI) => (
                     <li
                       key={`${item.id}-desc-${docI}`}
-                      className="pl-2 text-base text-tesla-400"
+                      className="pl-2 text-sm  md:text-base text-tesla-400"
                     >
                       {desc}
                     </li>
