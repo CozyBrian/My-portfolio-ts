@@ -40,6 +40,7 @@ const BentoImage = ({ images, type }: BentoImageProps) => {
               className="fixed left-0 top-0 w-screen h-screen bg-black/40 flex items-center justify-center p-4 md:p-24 z-40"
             >
               <MotionImage
+                key={`${images[selectedImage]}-full`}
                 layoutId="test-image"
                 transition={{
                   duration: 0.3,
@@ -61,6 +62,7 @@ const BentoImage = ({ images, type }: BentoImageProps) => {
             </motion.div>
           ) : (
             <MotionImage
+              key={`${images[selectedImage]}`}
               layoutId="test-image"
               onClick={() => setIsFull(!isFull)}
               whileHover={{
