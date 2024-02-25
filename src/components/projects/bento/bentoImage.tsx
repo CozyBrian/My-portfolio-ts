@@ -29,7 +29,7 @@ const BentoImage = ({ images, type }: BentoImageProps) => {
         animate={{ opacity: showImage ? 1 : 0 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.2 }}
-        className="w-full h-full flex flex-col items-center justify-center p-8"
+        className="relative w-full h-full flex flex-col items-center justify-center p-8"
       >
         <AnimatePresence>
           {isFull ? (
@@ -61,31 +61,33 @@ const BentoImage = ({ images, type }: BentoImageProps) => {
               />
             </motion.div>
           ) : (
-            <MotionImage
-              key={`${images[selectedImage]}`}
-              layoutId="test-image"
-              onClick={() => setIsFull(!isFull)}
-              whileHover={{
-                scale: 1.05,
-              }}
-              transition={{
-                duration: 0.3,
-              }}
-              priority
-              onLoad={async () => {
-                await new Promise((resolve) => setTimeout(resolve, 300));
-                setShowImage(true);
-                setShowImageSelector(true);
-              }}
-              src={images[selectedImage]}
-              width={type === "web" ? 360 : 180}
-              height={230}
-              className={classNames(
-                "object-contain z-20",
-                type === "web" ? "w-full" : "h-full",
-              )}
-              alt="Test Image"
-            />
+            <motion.div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full flex flex-col items-center justify-center p-8 z-20">
+              <MotionImage
+                key={`${images[selectedImage]}`}
+                layoutId="test-image"
+                onClick={() => setIsFull(!isFull)}
+                whileHover={{
+                  scale: 1.05,
+                }}
+                transition={{
+                  duration: 0.3,
+                }}
+                priority
+                onLoad={async () => {
+                  await new Promise((resolve) => setTimeout(resolve, 300));
+                  setShowImage(true);
+                  setShowImageSelector(true);
+                }}
+                src={images[selectedImage]}
+                width={type === "web" ? 360 : 180}
+                height={230}
+                className={classNames(
+                  "object-contain z-20",
+                  type === "web" ? "w-full" : "h-full",
+                )}
+                alt="Test Image"
+              />
+            </motion.div>
           )}
         </AnimatePresence>
       </motion.div>
@@ -94,7 +96,7 @@ const BentoImage = ({ images, type }: BentoImageProps) => {
         animate={{ opacity: showImageSelector ? 1 : 0 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.2 }}
-        className="absolute bottom-0 flex flex-row items-center justify-center gap-2 h-10 w-full"
+        className="absolute bottom-0 flex flex-row items-center justify-center gap-2 h-10 w-full z-30"
       >
         {images.map((image, index) => (
           <button

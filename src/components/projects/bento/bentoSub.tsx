@@ -9,7 +9,7 @@ type BentoSubProps = {
 };
 const BentoSub = ({ tags, link, live, type }: BentoSubProps) => {
   return (
-    <div className="flex-1 flex flex-col justify-between bg-tesla-700/70 m-2 rounded-3xl p-8">
+    <div className="flex-1 flex flex-col justify-between bg-tesla-700/70 m-2 rounded-3xl p-8 gap-4 md:gap-0">
       <div className="flex flex-row gap-2 gap-y-3 flex-wrap items-center text-sm">
         {tags?.map((tag) => (
           <motion.div

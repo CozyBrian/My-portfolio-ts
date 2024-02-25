@@ -4,60 +4,50 @@
 
 
 .project-bento {
-  display: grid; 
-
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column; 
 }
 .bento-image {
-  grid-row-start: 1;
-  grid-row-end: 3;
-  
-  grid-column-start: 1;
-  grid-column-end: 3;
+  flex-direction: column;
+  aspect-ratio: 1/1;
 }
 .bento-main {
-  grid-row-start: 3;
-  grid-row-end: 4;
-  
-  grid-column-start: 1;
-  grid-column-end: 3;   
+  min-height: 192px;
 }
 .bento-sub {
-  grid-column-start: 1;
-  grid-column-end: 3;
-  
-  grid-row-start: 4;
-  grid-row-end: 5; 
+  min-height: 192px;
 }
 
 @media (min-width: 768px) {
-  .project-bento {
+  .md\:project-bento {
+    display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
-  .bento-image {
+  .md\:bento-image {
     grid-row-start: 1;
     grid-column-start: 1;
   
     grid-row-end: 3;
     grid-column-end: 3;
   }
-  .bento-main {
+  .md\:bento-main {
     grid-row-start: 1;
     grid-column-start: 3;
   
     grid-row-end: 2;
     grid-column-end: 5;   
   }
-  .bento-sub {
+  .md\:bento-sub {
     grid-row-start: 2;
     grid-column-start: 3;
   
     grid-row-end: 3;
     grid-column-end: 5;
   }
+  
 }
+
 
 .x-contact-me:before {
   --size: 150px;
