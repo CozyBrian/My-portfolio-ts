@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     title: "Brian Newton | Hey 👀",
     description:
       "A showcase of my passion for Software Development—view my work here.",
-    url: "https://www.briannewton.me",
+    url: "https://www.briannewton.dev",
     locale: "en_US",
     type: "website",
     images: [

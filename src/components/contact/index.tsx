@@ -14,10 +14,10 @@ const ContactSection = () => {
           <p>
             Write me at{" "}
             <a
-              href="mailto:hello@briannewton.me"
+              href="mailto:brian@briannewton.dev"
               className="hover:text-tesla-100 duration-200"
             >
-              hello[at]briannewton.me
+              brian[at]briannewton.dev
             </a>{" "}
             :)
             {/* or{" "}
