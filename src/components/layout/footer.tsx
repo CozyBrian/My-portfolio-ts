@@ -1,4 +1,4 @@
-import { CozyMinecraftFooter } from "@/assets/images";
+import { Favicon } from "@/assets/images";
 import Image from "next/image";
 import React from "react";
 
@@ -9,11 +9,13 @@ const Footer = () => {
         <p className="text-tesla-text text-sm font-normal">
           © {new Date().getFullYear()} Brian Newton
         </p>
-        <div className="w-fit h-10">
+        <div className="w-fit flex flex-row items-center h-10">
           <Image
-            src={CozyMinecraftFooter}
-            className="h-full w-[72px]"
-            alt="Logo"
+            src={Favicon}
+            alt="Brian Newton"
+            width={32}
+            height={32}
+            className="w-8 h-8"
           />
         </div>
       </div>

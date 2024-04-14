@@ -13,7 +13,7 @@ const WorkSection = async ({ resume_url = "" }: WorkSectionProps) => {
   const { workData } = await getWorkData();
 
   return (
-    <section className="bg-tesla-800 min-h-[700px] mb-32 w-full flex flex-row justify-center items-center">
+    <section className="bg-tesla-800 min-h-[700px] mb-16 w-full flex flex-row justify-center items-center">
       <div className="w-screen md:w-[880px] min-h-[700px] py-14 flex flex-col gap-16">
         <h2 className="pl-4 md:pl-0 text-tesla-text text-3xl font-medium tracking-wide">
           EXPERIENCE

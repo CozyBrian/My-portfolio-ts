@@ -20,13 +20,6 @@ const ContactSection = () => {
               brian[at]briannewton.dev
             </a>{" "}
             :)
-            {/* or{" "}
-            <a
-              href="/#"
-              className="x-contact-me hover:text-tesla-100 duration-200"
-            >
-              shoot me a DM on X
-            </a> */}
           </p>
         </div>
       </div>

@@ -58,9 +58,9 @@ const BentoSub = ({ tags, link, live, type }: BentoSubProps) => {
             href={live}
             target="_blank"
             rel="noreferrer"
-            className="bg-[#26568a] h-11 outline outline-1 outline-transparent hover:outline-[#6e97c5] active:outline-[#c1d3e6] text-tesla-text font-medium px-4 py-2 rounded-lg duration-200"
+            className="bg-[#26568a] h-11 flex items-center outline outline-1 outline-transparent hover:outline-[#6e97c5] active:outline-[#c1d3e6] text-tesla-text font-medium px-4 py-2 rounded-lg duration-200"
           >
-            View Live
+            <p>View Live</p>
           </motion.a>
         )}
       </div>

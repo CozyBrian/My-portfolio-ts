@@ -5,6 +5,7 @@ import { CozyMinecraft } from "@/assets/images";
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import classNames from "classnames";
 import { useWindowSize } from "usehooks-ts";
+import Link from "next/link";
 
 const scrollThreshold = 80;
 const Header = () => {
@@ -36,9 +37,9 @@ const Header = () => {
       )}
     >
       <div className="w-full px-4 md:px-0 md:w-[880px] h-full flex flex-row items-center justify-between z-50">
-        <div className="w-fit h-11">
+        <Link href="/" className="w-fit h-11">
           <Image src={CozyMinecraft} className="h-full w-[72px]" alt="Logo" />
-        </div>
+        </Link>
         <div className="w-11 h-11 bg- slate-600"></div>
       </div>
       <div

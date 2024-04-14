@@ -18,6 +18,8 @@
   min-height: 192px;
 }
 
+
+
 @media (min-width: 768px) {
   .md\:project-bento {
     display: grid;
