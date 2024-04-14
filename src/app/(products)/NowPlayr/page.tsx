@@ -58,10 +58,10 @@ export default function Component() {
       </section>
       <section className="bg-tesla-800 md:min-h-[600px] mb-32 w-full flex flex-row justify-center items-center">
         <div className="w-screen md:w-[880px] md:min-h-[600px] py-14 flex flex-col gap-8">
-          <h2 className="pl-4 md:pl-0 text-tesla-text text-3xl font-semibold tracking-wide uppercase">
+          <h2 className="px-4 md:px-0 text-tesla-text text-3xl font-semibold tracking-wide uppercase">
             Now Playing View
           </h2>
-          <p className="pl-4 md:pl-0 text-tesla-text">
+          <p className="px-4 md:px-0 text-tesla-text">
             NowPlayr&apos;s non-intrusive banner appears whenever your music
             changes, showing the currently playing song and allowing you to
             focus on your work without missing a beat.
@@ -87,10 +87,10 @@ export default function Component() {
       <section className="bg-tesla-800 md:min-h-[600px] mb-32 w-full flex flex-row justify-center items-center">
         <div className="w-screen md:w-[880px] md:min-h-[600px] py-14 flex flex-col md:flex-row items-center gap-8">
           <div className="flex flex-col gap-8 max-w-[430px]">
-            <h2 className="pl-4 md:pl-0 text-tesla-text text-3xl font-medium tracking-wide uppercase">
+            <h2 className="px-4 md:px-0 text-tesla-text text-3xl font-medium tracking-wide uppercase">
               Player View
             </h2>
-            <p className="pl-4 md:pl-0 text-tesla-text leading-7">
+            <p className="px-4 md:px-0 text-tesla-text leading-7">
               Access your music from anywhere on your Mac with the NowPlayr
               floating player. Control playback, switch songs, and see
               what&apos;s playing without leaving your current app.
@@ -119,10 +119,10 @@ export default function Component() {
             </div>
           </div>
           <div className="flex flex-col gap-8 max-w-[430px]">
-            <h2 className="pl-4 md:pl-0 text-tesla-text text-3xl font-medium tracking-wide uppercase">
+            <h2 className="px-4 md:px-0 text-tesla-text text-3xl font-medium tracking-wide uppercase">
               Multi-app support
             </h2>
-            <p className="pl-4 md:pl-0 text-tesla-text leading-7">
+            <p className="px-4 md:px-0 text-tesla-text leading-7">
               NowPlayr offers an easy method to manage music playback for
               Spotify and Apple Music, displaying the currently playing track
               with the Now Playing Window or controling play back with the
@@ -131,7 +131,7 @@ export default function Component() {
           </div>
         </div>
       </section>
-      <div className="container flex items-center justify-center gap-8 px-4 text-center md:px-6 mb-32">
+      <div className="container flex flex-col md:flex-row items-center justify-center gap-8 px-4 text-center md:px-6 mb-32">
         <div className="space-y-3">
           <h2 className="text-3xl font-bold tracking-tighter text-tesla-100 sm:text-4xl md:text-5xl">
             Download NowPlayr
