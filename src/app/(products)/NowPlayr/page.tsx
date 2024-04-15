@@ -1,3 +1,4 @@
+import { NowPlayrOpenGraph } from "@/assets/images";
 import { NowPlayrIcon } from "@/assets/images/products";
 import {
   NPShot1,
@@ -16,9 +17,27 @@ export const metadata: Metadata = {
   description:
     "The beautiful, sleek, open-source music preview for macOS. Your music, at a glance.",
   themeColor: "#060D14",
+  openGraph: {
+    title: "Brian Newton | NowPlayr",
+    description:
+      "The beautiful, sleek, open-source music preview for macOS. Your music, at a glance.",
+    url: "https://www.briannewton.dev/NowPlayr",
+    locale: "en_US",
+    type: "website",
+    images: [
+      {
+        url: NowPlayrOpenGraph.src,
+        width: 1200,
+        height: 675,
+      },
+    ],
+  },
 };
 
 export default function Component() {
+  const downloadURL =
+    "https://github.com/CozyBrian/NowPlayr/releases/download/v1.0.0/NowPlayr.dmg";
+
   return (
     <>
       <section className="h-[680px] w-full md:w-[880px] flex flex-col justify-center">
@@ -40,7 +59,7 @@ export default function Component() {
               </div>
               <div>
                 <a
-                  href="https://github.com/CozyBrian/NowPlayr/releases/download/v1.0.0/NowPlayr.dmg"
+                  href={downloadURL}
                   download="NowPlayr.dmg"
                   className="bg-tesla-800 space-x-2 inline-flex items-center justify-center h-11 hover:shadow-tesla-sm hover:-translate-y-0.5 outline outline-1 outline-transparent hover:outline-tesla-400 active:translate-y-0.5 shadow-tesla-800 text-cozy-airBlue hover:text-tesla-300 font-medium px-4 py-2 rounded-lg duration-200"
                 >
@@ -143,7 +162,7 @@ export default function Component() {
         </div>
         <div className="flex flex-col gap-2 min-[400px]:flex-row">
           <a
-            href="https://github.com/CozyBrian/NowPlayr/releases/download/v1.0.0/NowPlayr.dmg"
+            href={downloadURL}
             download="NowPlayr.dmg"
             className="inline-flex h-10 items-center justify-center rounded-md px-8 text-sm font-medium shadow transition-colors focus-visible:outline-none focus-visible:ring-1 disabled:pointer-events-none disabled:opacity-50 bg-gray-50 text-gray-900 hover:bg-gray-50/90 focus-visible:ring-gray-300"
           >

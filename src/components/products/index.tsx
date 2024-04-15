@@ -11,10 +11,10 @@ const ProductsView = () => {
         <div className="grid md:grid-cols-3 grid-cols-1 px-4 md:px-0">
           <Link
             href="/NowPlayr"
-            className="bg-tesla-800 flex flex-col justify-center gap-2 outline outline-1 outline-tesla-400 hover:outline-tesla-300 shadow-tesla-800 text-tesla-300 font-medium p-4 rounded-lg duration-200"
+            className="bg-tesla-800 flex flex-col justify-center gap-2 outline outline-1 outline-tesla-400 hover:outline-tesla-300 shadow-tesla-800 text-tesla-300 p-4 rounded-lg duration-200"
           >
-            <p className="text-xl text-tesla-200">NowPlayr</p>
-            <p className=" text-tesla-300">
+            <p className="text-xl text-tesla-200 font-medium">NowPlayr</p>
+            <p className="text-tesla-300">
               The beautiful, sleek, open-source music preview for macOS. Your
               music, at a glance.
             </p>
