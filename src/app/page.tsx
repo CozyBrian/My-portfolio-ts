@@ -7,8 +7,6 @@ import ProjectsLoading from "@/components/projects/loading";
 import WorkSectionLoading from "@/components/experience/loading";
 import ProductsView from "@/components/products";
 
-export const dynamic = "force-dynamic";
-
 export default async function Home() {
   const { profileData } = await getProfileData();
 

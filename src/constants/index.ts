@@ -7,3 +7,5 @@ export const config = {
   FIREBASE_MESSAGINGSENDERID: process.env.FIREBASE_MESSAGINGSENDERID,
   FIREBASE_APPID: process.env.FIREBASE_APPID,
 };
+
+export const baseUrl = "https://www.briannewton.dev";

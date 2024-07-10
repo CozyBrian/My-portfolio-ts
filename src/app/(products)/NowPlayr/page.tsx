@@ -1,4 +1,3 @@
-import { NowPlayrOpenGraph } from "@/assets/images";
 import { NowPlayrIcon } from "@/assets/images/products";
 import {
   NPShot1,
@@ -13,24 +12,26 @@ import Image from "next/image";
 import React from "react";
 
 export const metadata: Metadata = {
-  title: "Brian Newton | NowPlayr",
+  title: "NowPlayr",
   description:
     "The beautiful, sleek, open-source music preview for macOS. Your music, at a glance.",
   themeColor: "#060D14",
+  keywords: [
+    "Brian Newton",
+    "CozyBrian",
+    "NowPlayr",
+    "macOS",
+    "Music Preview",
+    "Spotify",
+    "Apple Music",
+  ],
   openGraph: {
-    title: "Brian Newton | NowPlayr",
+    title: "NowPlayr | Brian Newton",
     description:
       "The beautiful, sleek, open-source music preview for macOS. Your music, at a glance.",
     url: "https://www.briannewton.dev/NowPlayr",
     locale: "en_US",
     type: "website",
-    images: [
-      {
-        url: NowPlayrOpenGraph.src,
-        width: 1200,
-        height: 675,
-      },
-    ],
   },
 };
 
