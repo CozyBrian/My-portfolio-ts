@@ -34,6 +34,13 @@ export const metadata: Metadata = {
     locale: "en_US",
     type: "website",
   },
+  icons: {
+    icon: "/favicon.ico",
+    other: {
+      rel: "canonical",
+      url: "https://www.briannewton.dev",
+    },
+  },
 };
 
 export default function RootLayout({
@@ -46,6 +53,9 @@ export default function RootLayout({
       lang="en"
       className={`bg-tesla-900 scroll-smooth ${FONTS.nunitoSans.variable}`}
     >
+      <head>
+        <link rel="canonical" href="https://www.briannewton.dev" />
+      </head>
       <body
         suppressHydrationWarning={true}
         className={classNames(
